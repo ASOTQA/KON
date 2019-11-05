@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
 <style>
-		body{
+	body{
 		font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
 		}
-		.gmisc_table tr:hover th[scope=row], .gmisc_table tr:hover td
+	.gmisc_table tr:hover th[scope=row], .gmisc_table tr:hover td
 		{ 
 		  background-color: #D3d5d1;
 		  color: #000;
 		}
-		table
-		{
+	table{
 		padding: 0;
 		margin: 0;
 		border-collapse: collapse;
@@ -20,106 +19,104 @@
 		color: #000;
 		background: #ffff;
 		}
-		  th, td {
+	th, td{
 		border: 1px solid black;
 		padding: 10px;
 		text-align: left;
 		}
-		.gmisc_table th[scope=col]{
+	.gmisc_table th[scope=col]{
 		border-bottom: 2px solid #333;
 		border-right: 2px solid #333;
 		}
-		.gmisc_table th, .gmisc_table td { padding: 0.5em; }
+	.gmisc_table th, .gmisc_table td { padding: 0.5em; }
 
-        .CellWithComment{position:relative;}
+    .CellWithComment{position:relative;}
 
-        .CellCommentAP
-        {
-            visibility: hidden;
-            width: auto;
-            position:absolute;					
-            z-index:100;
-            text-align: Left;
-            opacity: 0.4;
+    .CellCommentAP{
+        visibility: hidden;
+        width: auto;
+        position:absolute;					
+        z-index:100;
+        text-align: Left;
+        opacity: 0.4;
             border-radius: 6px;
-            background-color: #fbb819;
-	color: #ffff;
+        background-color: #fbb819;
+        color: #ffff;
+	    font-size: 14px;
+	    text-align: center;
+        padding:3px;
+        top:20px; 
+        left:0px;
+		}   
+    .CellWithComment:hover span.CellCommentAP {visibility: visible;opacity: 1;}
+	
+	.CellCommentFR{
+        visibility: hidden;
+        width: auto;
+        position:absolute; 
+		z-index:100;
+        text-align: Left;
+        opacity: 0.4;
+        border-radius: 6px;
+        background-color: #df3d5e;
+	    color: #ffff;
 		font-size: 14px;
 		text-align: center;
-            padding:3px;
-            top:20px; 
-            left:0px;
-			}   
-        .CellWithComment:hover span.CellCommentAP {visibility: visible;opacity: 1;}
-		
-		.CellCommentFR
-        {
-            visibility: hidden;
-            width: auto;
-            position:absolute; 
-			z-index:100;
-            text-align: Left;
-            opacity: 0.4;
-            border-radius: 6px;
-            background-color: #df3d5e;
-	color: #ffff;
-		font-size: 14px;
-		text-align: center;
-            padding:3px;
-            top:-30px; 
-            left:0px;
+        padding:3px;        top:-30px; 
+        left:0px;
         }   
-        .CellWithComment:hover span.CellCommentFR {visibility: visible;opacity: 1;}
+    .CellWithComment:hover span.CellCommentFR {visibility: visible;opacity: 1;}
 		
-		.CellCommentV
-        {
-            visibility: hidden;
-            width: auto;
-            position:absolute; 
-            z-index:100;
-            text-align: Left;
-            opacity: 0.4;
-            border-radius: 6px;
-            background-color: #8a6e91;
-	color: #ffff;
+	.CellCommentV{
+        visibility: hidden;
+        width: auto;
+        position:absolute; 
+        z-index:100;
+        text-align: Left;
+        opacity: 0.4;
+        border-radius: 6px;
+        background-color: #8a6e91;
+	    color: #ffff;
 		font-size: 15px;
 		text-align: center;
-            padding:3px;
-            top:-30px; 
-            left:0px;
-			right:0px;
+        padding:3px;
+        top:-30px; 
+        left:0px;
+		right:0px;
         }   
-        .CellWithComment:hover span.CellCommentV {visibility: visible;opacity: 1;}
+    .CellWithComment:hover span.CellCommentV {visibility: visible;opacity: 1;}
 		
-		.CellCommentGEN
-        {
-            visibility: hidden;
-            width: auto;
-            position:absolute;
-            z-index:100;
-            text-align: Left;
-            opacity: 0.4;
-            border-radius: 6px;
-            background-color: #3ca9a1;
-	color: #ffff;
+	.CellCommentGEN{
+        visibility: hidden;
+        width: auto;
+        position:absolute;
+        z-index:100;
+        text-align: Left;
+        opacity: 0.4;
+        border-radius: 6px;
+        background-color: #3ca9a1;
+	    color: #ffff;
 		font-size: 14px;
 		text-align: center;
-            padding:3px;
-            top:20px; 
-            left:0px;
+        padding:3px;
+        top:20px; 
+        left:0px;
         }   
-        .CellWithComment:hover span.CellCommentGEN {visibility: visible;opacity: 1;}
+    .CellWithComment:hover span.CellCommentGEN {visibility: visible;opacity: 1;}
 		
-		.forexplanation {
+	.forexplanation {
 		text-decoration: underline;
 		}
-		.menu-closed-logo {
+	.menu-closed-logo {
 		vertical-align: top;
 		float: right;
 		}
-        .domaindesc{
-            border-top-width: 5px;
-            border-top-color: rgb(0, 0, 0)
+    .domaindesc{
+        border-top-width: 5px;
+        border-top-color: rgb(0, 0, 0)
+        }
+    .text-center{
+        text-align: center;
         }
 </style>
 <head>
@@ -136,12 +133,21 @@
                 <div class="col-sm-1"></div>
                 <div class="col-sm-10">
                     <div class="jumbotron" style="background-color: #efefef;" >
-<h1 style = 'font-size: 35px; text-align: center; font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;'>KON Observation Rubric
-    <img class="menu-closed-logo" alt="EF Education First" src="https://www.ef.com/sitecore/__/~/media/universal/logo/global-header/2018/black/00.svg" height = "50" width = "80">
-</h1>
-<p style='text-align:center; font-size: 20px;'>The rubric below contains the scoring guide for the relevant descriptors/indicators.<br> Those areas which require further explanation are <span class = forexplanation>underlined</span><br>
-In order to see the scoring guide, simply hover your mouse over the specific part of the table. <br>
-The guide is color coded as follows:</P>
+                        <div class="row">
+                            <div class="col-sm-2">
+                                    <input class="btn btn-lg btn-secondary" onclick="location.href='https://asotqa.github.io/KON'" type="button" value="Home Page" margin-top: 100px;"/>
+                            </div>
+                            <div class="col-sm-8 text-center">
+                                <h1>KON Observation Rubric</h1>
+                                <h4 class="text-center"'>The rubric below contains the scoring guide for the relevant descriptors/indicators.<br> Those areas which require further explanation are <span class = forexplanation>underlined</span><br>
+                                    In order to see the scoring guide, simply hover your mouse over the specific part of the table. <br>
+                                    The guide is color coded as follows:</h4>
+                            </div>
+                            <div class="col-sm-2">
+                                    <img class="menu-closed-logo" alt="EF Education First" src="https://www.ef.com/sitecore/__/~/media/universal/logo/global-header/2018/black/00.svg" height = "50" width = "80">
+
+                            </div>
+                        </div>
 
 <p style = 'background-color:#fbb819; color: #ffff; font-size: 25px; text-align:center;'>Appropriate or Inappropriate Explanations</p> 
 <p style = 'background-color:#df3d5e; color: #ffff; font-size: 25px; text-align:center;'>Words of Frequency</p> 
@@ -164,18 +170,18 @@ The guide is color coded as follows:</P>
 <tbody>
 <tr>
 <td class='domaindesc' style='text-align: center; border-bottom: 1px white;'>Engagement</td>
-<td class='domaindesc' style='text-align: center;'></td>
-<td class='domaindesc' style='text-align: center;'></td>
-<td class='domaindesc' style='text-align: center;'>Low student engagement and participation is evident as a consequence of some combination of the following:</td>
-<td class='domaindesc CellWithComment' style='text-align: center;'><span class="forexplanation">Uneven and inconsistent</span> student engagement and participation is evident as a consequence of some combination of the following:
+<td class='domaindesc text-center'></td>
+<td class='domaindesc text-center'></td>
+<td class='domaindesc text-center'>Low student engagement and participation is evident as a consequence of some combination of the following:</td>
+<td class='domaindesc CellWithComment text-center''><span class="forexplanation">Uneven and inconsistent</span> student engagement and participation is evident as a consequence of some combination of the following:
 <span class="CellCommentFR"><strong>Uneven and Inconsistent:</strong> A mixture of successful/unsuccessful practice</span></td>
-<td class='domaindesc' style='text-align: center;'>Student engagement and participation are consistent as a consequence of some combination of the following:</td>
-<td class='domaindesc' style='text-align: center;'>Students are actively engaged and participate with a high level of energy throughout the observation, as evident through a combination of the following:</td>
+<td class='domaindesc text-center'>Student engagement and participation are consistent as a consequence of some combination of the following:</td>
+<td class='domaindesc text-center'>Students are actively engaged and participate with a high level of energy throughout the observation, as evident through a combination of the following:</td>
 </tr>
 <tr>
 <td style='text-align: center; border-bottom: 1px white; border-top: 1px white'></td>
-<td style='text-align: center;'>Building Rapport</td>
-<td style='text-align: center;'>
+<td class="text-center">Building Rapport</td>
+<td class="text-center">
 <ul type = "disk">
 <li>Greeting / Closure</li>
 <li>Name use</li>
@@ -184,24 +190,24 @@ The guide is color coded as follows:</P>
 <li>Relationship with parent</li>
 </ul>
 </td>
-<td style='text-align: center;' class="CellWithComment">The teacher makes <span class = forexplanation >little to no</span> attempt to build a connection, or fails to include an <span class = forexplanation >(appropriate)introduction</span> closure, or name use
+<td class="CellWithComment text-center">The teacher makes <span class = forexplanation >little to no</span> attempt to build a connection, or fails to include an <span class = forexplanation >(appropriate)introduction</span> closure, or name use
 <span class="CellCommentAP"><strong>Inappropriate introduction:</strong> Failing to mention ones name/ask for the student&rsquo;s name, asking unecessary questions or perhaps beginning to teach <br><strong>Inappropriate closure:</strong> Rushed closure with no final engaging component with the student</span>
 <span class="CellCommentFR"><strong>Little to no:</strong> Less than 20% of the observation</span>
 </td>
-<td style='text-align: center;' class = "CellWithComment">The teacher makes <span class = forexplanation >some</span> attempt to build a connection and display some attentiveness to the student&rsquo;s interests and personality
+<td class = "CellWithComment text-center">The teacher makes <span class = forexplanation >some</span> attempt to build a connection and display some attentiveness to the student&rsquo;s interests and personality
 <span class="CellCommentFR"><strong>Some:</strong> Less than half of the observation</span></td>
-<td style='text-align: center;' class = "CellWithComment">The teacher <span class = forexplanation >frequently</span> attempts to build a connection with an <span class = forexplanation >appropriate introduction/closure</span> and consistent name use, and demonstrates attentiveness toward the student&rsquo;s interest and personality
+<td class = "CellWithComment text-center">The teacher <span class = forexplanation >frequently</span> attempts to build a connection with an <span class = forexplanation >appropriate introduction/closure</span> and consistent name use, and demonstrates attentiveness toward the student&rsquo;s interest and personality
     <span class="CellCommentFR"><strong>Frequent:</strong> More than half of the observation</span>
     <span class="CellCommentAP"><strong>Appropriate introduction:</strong> Introduces themself, asks for name/how are you etc. Sets the stage for the lesson.<br><br> <strong>Appropriate closure:</strong>Thanks the student/Wraps up the lesson</span></td>
-<td style='text-align: center;' class = "CellWithComment">The teacher <span class = forexplanation>consistently</span> attempts to establishes and maintain a personal connection with the student throughout the lesson, implements an <span class = forexplanation >appropriate closure/introduction</span>, and makes use of personal information to facilitate a connection with the student
+<td class = "CellWithComment text-center">The teacher <span class = forexplanation>consistently</span> attempts to establishes and maintain a personal connection with the student throughout the lesson, implements an <span class = forexplanation >appropriate closure/introduction</span>, and makes use of personal information to facilitate a connection with the student
     <br><a href = https://europe.irisconnect.com/reflections/474946 target="_blank" >BENCHMARK A</a>
 <span class="CellCommentFR"><strong>Consistent:</strong> Through the entire observation</span>
 <span class="CellCommentAP"><strong>Appropriate introduction/closure:</strong> See Needs Improvement/Meets Expectations</span></td>
 </tr>
 <tr>
 <td style='text-align: center; border-bottom: 1px white; border-top: 1px white'></td>
-<td style='text-align: center;'>Positive Learning Environment</td>
-<td style='text-align: center;'>
+<td class="text-center'">Positive Learning Environment</td>
+<td class="text-center'">
 <ul type = "disk">
 <li>Attentive</li>
 <li>Patient</li>
@@ -212,111 +218,111 @@ The guide is color coded as follows:</P>
 <li>Maintain student focus</li>
 <li>Active</li>
 </ul></td>
-<td style='text-align: center;' class = "CellWithComment">There are <span class = forexplanation >little to no</span> attempts by the teacher to create a positive learning environment
+<td class = "CellWithComment text-center">There are <span class = forexplanation >little to no</span> attempts by the teacher to create a positive learning environment
 <span class="CellCommentFR"><strong>Little to no:</strong> Less than 20% of the observation</span></td>
-<td style='text-align: center;' class = "CellWithComment">There are <span class = forexplanation >some</span> attempts by the teacher to create a positive learning environment
+<td class = "CellWithComment text-center">There are <span class = forexplanation >some</span> attempts by the teacher to create a positive learning environment
 <span class="CellCommentFR"><strong>Some:</strong> Less than half of the observation</span></td>
-<td style='text-align: center;' class = "CellWithComment">There are <span class = forexplanation >frequent</span> attempts by the teacher to create to create a positive learning environment throughout the class that encourages student&rsquo;s participation and motivation in the lesson
+<td class = "CellWithComment text-center">There are <span class = forexplanation >frequent</span> attempts by the teacher to create to create a positive learning environment throughout the class that encourages student&rsquo;s participation and motivation in the lesson
 <span class="CellCommentFR"><strong>Frequent:</strong> More than half of the observation</span></td>
-<td style='text-align: center;' class = "CellWithComment">The positive learning environment is <span class = forexplanation >consistent</span> throughout the observation, appears authentic and attempts to motivate and encourage the student&rsquo;s engagement and learning
+<td class = "CellWithComment text-center">The positive learning environment is <span class = forexplanation >consistent</span> throughout the observation, appears authentic and attempts to motivate and encourage the student&rsquo;s engagement and learning
     <br><a href = https://europe.irisconnect.com/reflections/474451 target="_blank" >BENCHMARK A</a>
 <span class="CellCommentFR"><strong>Consistent:</strong> Through the entire observation</span></td>
 </tr>
 <tr>
 <td style='text-align: center; border-bottom: 1px white; border-top: 1px white'></td>
-<td style='text-align: center;'>Non-Verbal Communication</td>
-<td style='text-align: center;'>
+<td class="text-center">Non-Verbal Communication</td>
+<td class="text-center">
 <ul type = "disk">
 <li>Tone of voice</li>
 <li>Facial expressions</li>
 <li>Gestures</li>
 </ul></td>
-<td style='text-align: center;' class = "CellWithComment">There are <span class = forexplanation >little to no</span> displays of non-verbal communication
+<td class = "CellWithComment text-center">There are <span class = forexplanation >little to no</span> displays of non-verbal communication
 <span class="CellCommentFR"><strong>Little to no:</strong> Less than 20% of the observation</span></td>
-<td style='text-align: center;' class = "CellWithComment">There are <span class = forexplanation >some</span> displays of non-verbal communication
+<td class = "CellWithComment text-center">There are <span class = forexplanation >some</span> displays of non-verbal communication
 <span class="CellCommentFR"><strong>Some:</strong> Less than half of the observation</span></td></td>
-<td style='text-align: center;' class = "CellWithComment">There are <span class = forexplanation >frequent</span> displays of non-verbal communication used to enhance engagement, learning, and communication
-<span class="CellCommentFR"><strong>Frequent:</strong> More than half of the observation</span></td>
-<td style='text-align: center;' class = "CellWithComment">There is a <span class = forexplanation >context-specific</span> use of non-verbal communication used to enhance success in multiple domains (Learning/Engagement/Communication) <br> <a href = https://europe.irisconnect.com/reflections/462950 target="_blank" >Mini-Segement: Context Specific Delivery</a>
+<td class = "CellWithComment text-center">There are <span class = forexplanation >frequent</span> displays of non-verbal communication used to enhance engagement, learning, and communication
+<span class="CellCommentFR "><strong>Frequent:</strong> More than half of the observation</span></td>
+<td class = "CellWithComment text-center">There is a <span class = forexplanation >context-specific</span> use of non-verbal communication used to enhance success in multiple domains (Learning/Engagement/Communication) <br> <a href = https://europe.irisconnect.com/reflections/462950 target="_blank" >Mini-Segement: Context Specific Delivery</a>
     <span class="CellCommentGEN"><strong>Context Specific</strong> Gestures that are directly associated to the target language/language under present discussion</span></td>
 </tr>
 <tr>
 <td style='text-align: center; border-bottom: 1px white; border-top: 1px white'></td>
-<td style='text-align: center;'>Lesson Delivery</td>
-<td style='text-align: center;'>
+<td class="text-center">Lesson Delivery</td>
+<td class="text-center">
 <ul type = "disk">
 <li>Fun delivery of lesson content</li>
 <li>Makes connections between aspects of the environment (self, student, lesson characters, lesson content)</li>
 <li>React and adapt</li>
 <li>Memorable moments</li>
 </ul></td>
-<td style='text-align: center;' class = "CellWithComment">There is <span class = forexplanation >little to no</span> attempt to <span class = forexplanation >bring the lesson material to life</span>. Lesson delivery is repetitive
+<td class = "CellWithComment text-center">There is <span class = forexplanation >little to no</span> attempt to <span class = forexplanation >bring the lesson material to life</span>. Lesson delivery is repetitive
 <span class="CellCommentGEN"><strong>Bring the lesson material to life:</strong> Connections are made to the material that make it fun and relevant to the student and learning outcomes. The content is raised beyond mere read and answer interactions</span>
 <span class="CellCommentFR"><strong>Little to no:</strong> Less than 20% of the observation</span></td>
-<td style='text-align: center;'class = "CellWithComment">There is <span class = forexplanation >some</span> attempt to bring the lesson material to life <br><a href = https://europe.irisconnect.com/reflections/462947 target="_blank" >BENCHMARK A</a>
+<td class = "CellWithComment text-center">There is <span class = forexplanation >some</span> attempt to bring the lesson material to life <br><a href = https://europe.irisconnect.com/reflections/462947 target="_blank" >BENCHMARK A</a>
 <span class="CellCommentFR"><strong>Some:</strong> Less than half of the observation</span></td>
-<td style='text-align: center;'class = "CellWithComment">Teacher brings lesson material to life through fun and engaging techniques</td>
-<td style='text-align: center;'class = "CellWithComment">By bringing the lesson material to life, the teacher is able to create a <span class = forexplanation >memorable interaction</span> which appears authentic and spontaneous 
+<td class = "CellWithComment text-center">Teacher brings lesson material to life through fun and engaging techniques</td>
+<td class = "CellWithComment text-center">By bringing the lesson material to life, the teacher is able to create a <span class = forexplanation >memorable interaction</span> which appears authentic and spontaneous 
     <br><a href = https://europe.irisconnect.com/reflections/475199 target="_blank" >BENCHMARK A</a>
 <span class="CellCommentGEN"><strong>Memorable Interaction:</strong> A content-related interaction that brings the lesson material to life, but in a way that can be replicated for other teachers to readily implement too.</span></td>
 </tr>
 <tr>
 <td style='text-align: center; border-top: 1px white'></td>
-<td style='text-align: center;'>Praise</td>
-<td style='text-align: center;'>
+<td class="text-center">Praise</td>
+<td class="text-center">
 <ul type = "disk">
 <li>General</li>
 <li>Specific</li>
 <li>Reward System</li>
 </ul></td>
-<td style='text-align: center;' class = "CellWithComment">There is <span class = forexplanation >little to no</span> attempt to praise/reward the student for achievements in the lesson
+<td class = "CellWithComment text-center">There is <span class = forexplanation >little to no</span> attempt to praise/reward the student for achievements in the lesson
 <span class="CellCommentFR"><strong>Little to no:</strong> Less than 20% of the observation</span></td>
-<td style='text-align: center;' class = "CellWithComment">The teacher gives <span class = forexplanation >some</span> and/or <span class = forexplanation >inappropriate praise/reward</span>
+<td class = "CellWithComment text-center">The teacher gives <span class = forexplanation >some</span> and/or <span class = forexplanation >inappropriate praise/reward</span>
 <span class="CellCommentAP"><strong>Inappropriate Praise/Reward:</strong> Praise/Reward is given when student makes mistakes/ given without verbal reinforcement</span>
 <span class="CellCommentFR"><strong>Some:</strong> Less than half of the observation</span></td>
-<td style='text-align: center;' class = "CellWithComment">Teacher <span class = forexplanation >frequently</span> praises/rewards the student for achievements in the lesson
+<td class = "CellWithComment text-center">Teacher <span class = forexplanation >frequently</span> praises/rewards the student for achievements in the lesson
 <span class="CellCommentFR"><strong>Frequently:</strong> More than half of the observation</span></td>
-<td style='text-align: center;' class = "CellWithComment">The Teacher <span class = forexplanation >consistently</span> and <span class = forexplanation >appropriately praises/rewards</span> the student for achievements in the lesson
+<td class = "CellWithComment text-center">The Teacher <span class = forexplanation >consistently</span> and <span class = forexplanation >appropriately praises/rewards</span> the student for achievements in the lesson
 <span class="CellCommentAP"><strong>Appropriate Praise/Reward</strong> Praise is given when student success is observed</span>
 <span class="CellCommentFR"><strong>Consistently:</strong> Throughout the entire observation</span></td>
 </tr>
 <tr>
-<td class='domaindesc' style='text-align: center; border-bottom: 1px white;'>Learning</td>
-<td class='domaindesc' style='text-align: center;'></td>
-<td class='domaindesc' style='text-align: center;'></td>
-<td class='domaindesc' style='text-align: center;'>Opportunities for student learning are impeded as a consequence of some combination of the following:</td>
-<td class='domaindesc' style='text-align: center;'>Some opportunities to engage in effective learning is evident as a consequence of some combination of the following:</td>
-<td class='domaindesc' style='text-align: center;'>The student has a broad range of opportunities to engage in effective and successful learning as a consequence of some combination of the following:</td>
-<td class='domaindesc' style='text-align: center;'>Students are provided with opportunities to extend beyond their existing knowledge, as evident through a combination of the following.</td>
+<td class='domaindesc text-center' style='text-align: center; border-bottom: 1px white;'>Learning</td>
+<td class='domaindesc text-center' ></td>
+<td class='domaindesc text-center' ></td>
+<td class='domaindesc text-center' >Opportunities for student learning are impeded as a consequence of some combination of the following:</td>
+<td class='domaindesc text-center' >Some opportunities to engage in effective learning is evident as a consequence of some combination of the following:</td>
+<td class='domaindesc text-center' >The student has a broad range of opportunities to engage in effective and successful learning as a consequence of some combination of the following:</td>
+<td class='domaindesc text-center' >Students are provided with opportunities to extend beyond their existing knowledge, as evident through a combination of the following.</td>
 </tr>
 <tr>
 <td style='text-align: center; border-bottom: 1px white; border-top: 1px white'></td>
-<td style='text-align: center;' class = "CellWithComment"><span class = forexplanation >Correction, Feedback</span>
+<td class = "CellWithComment text-center"><span class = forexplanation >Correction, Feedback</span>
     <span class="CellCommentGEN"><strong>Correction, Feedback Guide:</strong> Score the number of corrections/feedback provided in proportion to the number of mistakes made by the student.</span>
 </td>
-<td style='text-align: center;'>
+<td class="text-center">
 <ul type = "disk">
 <li>Specific/focused</li>
 <li>Timing (immediate/ delayed)</li>
 <li>Self-correction</li>
 <li>Written feedback</li>
 </ul></td>
-<td style='text-align: center;'class = "CellWithComment">There is <span class = forexplanation >little to no</span> corrective feedback given
+<td class = "CellWithComment text-center">There is <span class = forexplanation >little to no</span> corrective feedback given
 <span class="CellCommentFR"><strong>Little to no:</strong> Less than 20% of the observation</span></td>
-<td style='text-align: center;'class = "CellWithComment">Provides <span class = forexplanation >some</span> corrective feedback with <span class = forexplanation>little variety</span> OR ineffective techniques are used to provide corrective feedback
+<td class = "CellWithComment text-center">Provides <span class = forexplanation >some</span> corrective feedback with <span class = forexplanation>little variety</span> OR ineffective techniques are used to provide corrective feedback
 <span class="CellCommentFR"><strong>Some:</strong> Less than half of the observation</span>
 <span class="CellCommentV"><strong>Little variety:</strong> Two or fewer techniques observed</span></td>
-<td style='text-align: center;'class = "CellWithComment">Demonstrates an awareness of when to provide <span class = forexplanation >appropriate corrective feedback</span> and does so with <span class = forexplanation >variety</span> for almost all major errors
+<td class = "CellWithComment text-center">Demonstrates an awareness of when to provide <span class = forexplanation >appropriate corrective feedback</span> and does so with <span class = forexplanation >variety</span> for almost all major errors
 <span class="CellCommentAP"><strong>Appropriate Correcive Feedback:</strong> Fedback upon student actions/mistakes that concern the lesson aims and content<br>
 <br><strong>Inappropriate Corrective Feedback</strong> Provides feedback on student success/ provides misleading feedback/ provides incorrect feedback</span>
 <span class="CellCommentV"><strong>Variety:</strong> More than two techniques observed</span>
 </td>
-<td style='text-align: center;'>Encourages and facilitates self-correction and utilizes a range of correction techniques to extend learning</td>
+<td class="text-center">Encourages and facilitates self-correction and utilizes a range of correction techniques to extend learning</td>
 </tr>
 <tr>
 <td style='text-align: center;border-bottom: 1px white; border-top: 1px white'></td>
-<td style='text-align: center;'>Teaching Strategies</td>
-<td style='text-align: center;'>
+<td class="text-center">Teaching Strategies</td>
+<td class="text-center">
 <ul type = "disk">
 <li>Repetition</li>
 <li>Elicitation</li>
@@ -326,15 +332,15 @@ The guide is color coded as follows:</P>
 <li>Think Time</li>
 <li>Questioning</li>
 </ul></td>
-<td style='text-align: center;'class = "CellWithComment">Uses <span class = forexplanation>little to no</span> teaching strategies
+<td class = "CellWithComment text-center">Uses <span class = forexplanation>little to no</span> teaching strategies
     <span class="CellCommentFR"><strong>Little to no:</strong> Less than 20% of the observation</span></td>
-<td style='text-align: center;'class = "CellWithComment">Uses <span class = forexplanation >some</span> teaching strategies, or the strategies used are <span class="forexplanation">not appropriate</span> to the lesson and student
+<td class = "CellWithComment text-center">Uses <span class = forexplanation >some</span> teaching strategies, or the strategies used are <span class="forexplanation">not appropriate</span> to the lesson and student
 <span class="CellCommentFR"><strong>Some:</strong> Less than half of the observation</span>
 <span class="CellCommentAP"><strong>Inappropriate student level:</strong> Use of instruction/content/activities includes words which are beyond the student&rsquo;s level, or is delivered in an unaccomodating manner such as speed.</span></td>
-<td style='text-align: center;'class = "CellWithComment">Makes <span class="forexplanation">frequent</span> use of strategies and the strategies are <span class="forexplanation">almost always</span> <span class = forexplanation >appropriate </span> to the lesson and student
+<td class = "CellWithComment text-center">Makes <span class="forexplanation">frequent</span> use of strategies and the strategies are <span class="forexplanation">almost always</span> <span class = forexplanation >appropriate </span> to the lesson and student
     <span class="CellCommentFR"><strong>Frequent/Almost always:</strong> More than half of the observation </span>
     <span style="top: 45px;" class="CellCommentAP"><strong>Appropriate student level:</strong> Delivery of content/instruction/activity is understood by the student with little confusion, or is slightly challenging/accomodating based upon level<br></td>
-<td style='text-align: center;' class="CellWithComment"><span class="forexplanation">Consistent</span> use of strategies that are <span class="forexplanation">always</span> <span class="forexplanation">appropriate</span> to the lesson and student
+<td class="CellWithComment text-center"><span class="forexplanation">Consistent</span> use of strategies that are <span class="forexplanation">always</span> <span class="forexplanation">appropriate</span> to the lesson and student
     <br><a href = https://europe.irisconnect.com/reflections/482237 target="_blank" >BENCHMARK A</a>
     <span class="CellCommentFR"><strong>Consistent/Always:</strong> Throughout the entire observation</span>
     <span class="CellCommentAP"><strong>Appropriate student level:</strong> See explanation in 'Meets Expectations'</span></td>
@@ -343,8 +349,8 @@ The guide is color coded as follows:</P>
 </tr>
 <tr>
 <td style='text-align: center;border-top: 1px white'></td>
-<td style='text-align: center;'>Student Production</td>
-<td style='text-align: center;'>
+<td class="text-center">Student Production</td>
+<td class="text-center">
 <ul type = "disk">
 <li>Prompt full-sentences</li>
 <li>Balance of TTT vs STT</li>
@@ -352,31 +358,31 @@ The guide is color coded as follows:</P>
 <li>Think Time</li>
 </ul>
 </td>
-<td style='text-align: center;'class = "CellWithComment">Teacher makes <span class = forexplanation >little to no</span> effort to facilitate student production
+<td class = "CellWithComment text-center">Teacher makes <span class = forexplanation >little to no</span> effort to facilitate student production
 <span class="CellCommentFR"><strong>Little to no:</strong> Less than 20% of the observation</span></td>
-<td style='text-align: center;'class = "CellWithComment">Teacher demonstrates <span class = forexplanation >some</span> effort to facilitate student production to the <span class = forexplanation >appropriate level</span>
+<td class = "CellWithComment text-center">Teacher demonstrates <span class = forexplanation >some</span> effort to facilitate student production to the <span class = forexplanation >appropriate level</span>
 <span class="CellCommentFR"><strong>Some:</strong> Less than half of the observation</span>
 <span class="CellCommentAP"><strong>Appropriate Student Level:</strong> Delivery of content/instruction/activity is understood by the student with little confusion, or is slightly challenging/accomodating based upon level<br>
 <br><strong>Inappropriate Student Level</strong> Use of instruction/content/activities includes words which are beyond the student&rsquo;s level, or is delivered in an unaccomodating manner such as speed.</span></td>
-<td style='text-align: center;'class = "CellWithComment">Teacher makes <span class = forexplanation >frequent</span> effort to facilitate student production using a range of techniques  to the <span class = forexplanation >appropriate level</span>
+<td class = "CellWithComment text-center">Teacher makes <span class = forexplanation >frequent</span> effort to facilitate student production using a range of techniques  to the <span class = forexplanation >appropriate level</span>
 <span class="CellCommentFR"><strong>Frequent:</strong> More than half of the observation</span>
 <span class="CellCommentAP"><strong>Appropriate Student Level:</strong> see 'Developing'</span></td>
-<td style='text-align: center;'class = "CellWithComment">Teacher <span class = forexplanation >consistently</span> facilitates student production using a range of techniques, and makes  efforts to extend, transcend,  or reinforce where appropriate
+<td class = "CellWithComment text-center">Teacher <span class = forexplanation >consistently</span> facilitates student production using a range of techniques, and makes  efforts to extend, transcend,  or reinforce where appropriate
 <span class="CellCommentFR"><strong>Consistently:</strong> Throughout the entire observation</span></td>
 </tr>
 <tr>
 <td class='domaindesc' style='text-align: center;border-bottom: 1px white'>Classroom Management</td>
-<td class='domaindesc' style='text-align: center;'></td>
-<td class='domaindesc' style='text-align: center;'></td>
-<td class='domaindesc' style='text-align: center;'>Ineffective use of online environment impedes learning, through some combination of the following:</td>
-<td class='domaindesc' style='text-align: center;'>Use of online environment is not an impediment to learning but does not enhance it, through some combination of the following:</td>
-<td class='domaindesc' style='text-align: center;'>The online environment functions smoothly and efficiently, through some combination of the following:</td>
-<td class='domaindesc' style='text-align: center;'>The online environment functions seamlessly and facilitates practices within other domains through some combination of the following:</td>
+<td class='domaindesc text-center'></td>
+<td class='domaindesc text-center'></td>
+<td class='domaindesc text-center'>Ineffective use of online environment impedes learning, through some combination of the following:</td>
+<td class='domaindesc text-center'>Use of online environment is not an impediment to learning but does not enhance it, through some combination of the following:</td>
+<td class='domaindesc text-center'>The online environment functions smoothly and efficiently, through some combination of the following:</td>
+<td class='domaindesc text-center'>The online environment functions seamlessly and facilitates practices within other domains through some combination of the following:</td>
 </tr>
 <tr>
 <td style='text-align: center;border-bottom: 1px white; border-top: 1px white'></td>
-<td style='text-align: center;'>Online Environment</td>
-<td style='text-align: center;' class = "CellWithComment">
+<td class="text-center">Online Environment</td>
+<td class = "CellWithComment text-center">
 <ul type = "disk">
 <li>Presentable, professional dress</li>
 <li>Plain, non-distracting, background</li>
@@ -387,48 +393,48 @@ The guide is color coded as follows:</P>
 </ul>
 <span class="CellCommentAP"><strong>Appropriate Location:</strong> Teaching location is quiet, undistracting, and befitting of a professional environment<br>
 <br><strong>Inappropriate Location:</strong> Teaching is undertaken from a bed/outisde/car/ or other location which is unprofessional</span></td>
-<td style='text-align: center;'>No effort evident in at least one or more indicators OR there is noticeable room for improvement in more than two indicators</td>
-<td style='text-align: center;'>Efforts appear to have been made, but there is still room for improvement in one or two indicators</td>
-<td style='text-align: center;'>All indicators of online environment are met</td>
-<td style='text-align: center;'>All indicators of online environment are met, and additional care and attention to detail is evident</td>
+<td class="text-center">No effort evident in at least one or more indicators OR there is noticeable room for improvement in more than two indicators</td>
+<td class="text-center">Efforts appear to have been made, but there is still room for improvement in one or two indicators</td>
+<td class="text-center">All indicators of online environment are met</td>
+<td class="text-center">All indicators of online environment are met, and additional care and attention to detail is evident</td>
 </tr>
 <tr>
 <td style='text-align: center;border-bottom: 1px white; border-top: 1px white'></td>
-<td style='text-align: center;'>Classroom Tools</td>
-<td style='text-align: center;'>
+<td class="text-center">Classroom Tools</td>
+<td class="text-center">
 <ul type = "disk">
 <li>Chat pod</li>
 <li>Note pod</li>
 <li>Arrow</li>
 <li>Drawing Tools</li>
 </ul></td>
-<td style='text-align: center;'class = "CellWithComment">There are <span class = forexplanation >little to no</span> attempts by the teacher to use classroom tools
+<td class = "CellWithComment text-center">There are <span class = forexplanation >little to no</span> attempts by the teacher to use classroom tools
 <span class="CellCommentFR"><strong>Little to no:</strong> Less than 20% of the observation</span></td>
-<td style='text-align: center;'class = "CellWithComment">The teacher demonstrates <span class = forexplanation >some</span> use of classroom tools with <span class = forexplanation >little variety</span>
+<td class = "CellWithComment text-center">The teacher demonstrates <span class = forexplanation >some</span> use of classroom tools with <span class = forexplanation >little variety</span>
 <span class="CellCommentV"><strong>Variety of tools:</strong> More than two tools or tool uses</span>
 <span style='top:30px' class="CellCommentFR"><strong>Some:</strong> Less than half of the observation</span></td>
-<td style='text-align: center;'class = "CellWithComment">Teacher <span class = forexplanation >frequently</span> and effectively uses a <span class = forexplanation >variety of classroom tools</span>
+<td class = "CellWithComment text-center">Teacher <span class = forexplanation >frequently</span> and effectively uses a <span class = forexplanation >variety of classroom tools</span>
 <span class="CellCommentV"><strong>Variety of tools:</strong> More than two tools or tool uses</span>
 <span style='top:30px'  class="CellCommentFR"><strong>Frequent:</strong> More than half of the observation</span></td>
-<td style='text-align: center;'>Teacher is able to effectively use classroom tools to enhance success in multiple domains (Learning/Engagement/Communication) <br><a href = https://europe.irisconnect.com/reflections/475554 target="_blank" >BENCHMARK A</a> </td>
+<td class="text-center">Teacher is able to effectively use classroom tools to enhance success in multiple domains (Learning/Engagement/Communication) <br><a href = https://europe.irisconnect.com/reflections/475554 target="_blank" >BENCHMARK A</a> </td>
 </tr>
 <tr>
 <td style='text-align: center; border-top: 1px white; border-bottom: 1px white' ></td>
-<td style='text-align: center;'>Staging and Timing</td>
-<td style='text-align: center;'>
+<td class="text-center">Staging and Timing</td>
+<td class="text-center">
 <ul type = "disk">
 <li>Pacing / Timing</li>
 <li>Verbal transitions</li>
 <li>Lesson flow (smooth vs. rushed, skipping)</li>
 <li>Change slides to correct activity</li>
 </ul></td>
-<td style='text-align: center;'class = "CellWithComment">The teacher ineffectually navigates the lesson with <span class = forexplanation >inappropriate lesson pace</span>, transitions, and lesson flow
+<td class = "CellWithComment text-center">The teacher ineffectually navigates the lesson with <span class = forexplanation >inappropriate lesson pace</span>, transitions, and lesson flow
 <span class="CellCommentAP"><strong>Inappropriate Lesson Pace:</strong> Pace is inappropriate when it is rushed or unecessarily slow.</span></td>
-<td style='text-align: center;'>The teacher navigates the lesson using inconsistent and uneven lesson pace/transitions/lesson flow</td>
-<td style='text-align: center;'class = "CellWithComment">The teacher navigates the lesson with a <span class = forexplanation >frequently appropriate lesson pace</span>, transitions and lesson flow
+<td class="text-center">The teacher navigates the lesson using inconsistent and uneven lesson pace/transitions/lesson flow</td>
+<td class = "CellWithComment text-center">The teacher navigates the lesson with a <span class = forexplanation >frequently appropriate lesson pace</span>, transitions and lesson flow
     <span class="CellCommentFR"><strong>Frequent:</strong> More than half of the observation</span>
     <span class="CellCommentAP"><strong>Appropriate Lesson Pace:</strong> Lesson pace is appropriate when it takes into account the nature of the content, importance of the material, and does so in conjunction to the observed student success/difficulties.</span></td>
-    <td style='text-align: center;'class = "CellWithComment">The teacher maximizes lesson time and utilizes effective verbal transitions between slides. The lesson flow is <span class="forexplanation">consistently appropriate</span> based upon observed student difficulties
+    <td class = "CellWithComment text-center">The teacher maximizes lesson time and utilizes effective verbal transitions between slides. The lesson flow is <span class="forexplanation">consistently appropriate</span> based upon observed student difficulties
         <br><a href = https://europe.irisconnect.com/reflections/482274 target="_blank" >BENCHMARK A</a>
         <span class="CellCommentFR"><strong>Consistently:</strong> Throughout the entire observation</span>
         <span class="CellCommentAP"><strong>Appropriate Lesson Pace:</strong> See Meets Expectations/Developing for explanation</span></td>
@@ -437,22 +443,22 @@ The guide is color coded as follows:</P>
 
 <tr>
         <td style='text-align: center; border-top: 1px white'></td>
-        <td style='text-align: center;' class="CellWithComment"> <span class="forexplanation">Difficult Situations</span><br>(Optional)
+        <td class="CellWithComment text-center"> <span class="forexplanation">Difficult Situations</span><br>(Optional)
         <span class="CellCommentGEN"><strong>Difficult Situations Guidance</strong><br> This is an optional element: if there are no technical issues or misbehavior, simply mark 'Unable to Assess'</span></td>
-        <td style='text-align: center;'>
+        <td class="text-center">
         <ul type = "disk">
         <li>Technical Issues</li>
         <li>Student (Mis)Behavior</li>
         </ul></td>
-        <td style='text-align: center;'class = "CellWithComment">The teacher makes <span class = forexplanation >little to no</span> effort to resolve difficult situations and/or teacher responds <span class = forexplanation >inappropriately</span>
+        <td class = "CellWithComment text-center">The teacher makes <span class = forexplanation >little to no</span> effort to resolve difficult situations and/or teacher responds <span class = forexplanation >inappropriately</span>
             <span class="CellCommentFR"><strong>Little to no:</strong> Less than 20% of the observation</span>
             <span class="CellCommentAP"><strong>Inappropriate response/reaction:</strong> The teacher's response to misbehavior is impatient or counterproductive. The teacher may show evident signs of frustration or a lack of equanimity. The teacher is passive in their approach to resolving or confronting a difficult situation.</span></td>
-        <td style='text-align: center;' class="CellWithComment">The teacher makes <span class = forexplanation >some</span> effort to respond to/resolve difficult situations in an <span class = forexplanation >appropriate</span> manner
+        <td  class="CellWithComment text-center">The teacher makes <span class = forexplanation >some</span> effort to respond to/resolve difficult situations in an <span class = forexplanation >appropriate</span> manner
             <span class="CellCommentFR"><strong>Some:</strong> Less than half of the observation</span>
             <span class="CellCommentAP"><strong>Appropriate response/reaction:</strong> The teacher is patient, maintains composure, communicates the issues coherently to relevant parties (student/parent); works through the necessary technical issues guidance</span></td>
-        <td style='text-align: center;'class = "CellWithComment">The teacher responds <span class = forexplanation >appropriately</span> to difficult situations and makes clear efforts to resolve the situation
+        <td class = "CellWithComment text-center">The teacher responds <span class = forexplanation >appropriately</span> to difficult situations and makes clear efforts to resolve the situation
             <span class="CellCommentAP"><strong>Appropriate response/reaction:</strong> See explanation in Developing or Needs Improvement</span></td>
-        <td style='text-align: center;'class = "CellWithComment">The teacher responds to difficult situations in a manner that is <span class="forexplanation">befitting of best practices</span>, and, when necessary, implements a <span class="forexplanation">variety</span> of methods to resolve the observed situation
+        <td class = "CellWithComment text-center">The teacher responds to difficult situations in a manner that is <span class="forexplanation">befitting of best practices</span>, and, when necessary, implements a <span class="forexplanation">variety</span> of methods to resolve the observed situation
                 <span class="CellCommentV"><strong>Variety of methods:</strong> The teacher is able to use more than one method to resolve the difficult situations </span>
                 <span style="top: 45px;" class="CellCommentGEN"><strong>Befitting of best practices:</strong> The teaching practice serves an exemplar model for dealing with difficult situations</span>
                 <br><a href = https://europe.irisconnect.com/reflections/480325 target="_blank" >BENCHMARK A</a>
@@ -461,22 +467,22 @@ The guide is color coded as follows:</P>
             
 <tr>
 <td class='domaindesc' style='text-align: center;border-bottom: 1px white;'>Communication</td>
-<td class='domaindesc' style='text-align: center;'></td>
-<td class='domaindesc' style='text-align: center;'></td>
-<td class='domaindesc CellWithComment' style='text-align: center;'>Communication is inaccurate, unclear and unsuitable to the student level, through some combination of the following:</td>
-<td class='domaindesc CellWithComment' style='text-align: center;'>Communication is <span class = forexplanation >sometimes</span> accurate/clear/ appropriate to the student level, through some combination of the following:
+<td class='domaindesc text-center'></td>
+<td class='domaindesc text-center'></td>
+<td class='domaindesc CellWithComment text-center'>Communication is inaccurate, unclear and unsuitable to the student level, through some combination of the following:</td>
+<td class='domaindesc CellWithComment text-center'>Communication is <span class = forexplanation >sometimes</span> accurate/clear/ appropriate to the student level, through some combination of the following:
     <span class="CellCommentFR"><strong>Some:</strong> Less than half of the observation</span>
 </td>
-<td class='domaindesc CellWithComment' style='text-align: center;'>Communication is <span class = forexplanation >frequently</span> accurate/clear/ appropriate to the student level, through some combination of the following:
+<td class='domaindesc CellWithComment text-center'>Communication is <span class = forexplanation >frequently</span> accurate/clear/ appropriate to the student level, through some combination of the following:
     <span class="CellCommentFR"><strong>Frequent:</strong> More than half of the observation</span></td>
 </td>
-<td class='domaindesc CellWithComment' style='text-align: center;'>Communication is <span class = forexplanation >consistently</span> accurate/clear/ appropriate to the student level, through some combination of the following:
+<td class='domaindesc CellWithComment text-center'>Communication is <span class = forexplanation >consistently</span> accurate/clear/ appropriate to the student level, through some combination of the following:
 <span class="CellCommentFR"><strong>Consistently:</strong> Throughout the entire observation</span></td>
 </tr>
 <tr>
 <td style='text-align: center;border-bottom: 1px white; border-top: 1px white'></td>
-<td style='text-align: center;'>Instruction Giving and Explanations</td>
-<td style='text-align: center;'>
+<td class="text-center">Instruction Giving and Explanations</td>
+<td class="text-center">
 <ul type = "disk">
 <li>Clear and concise</li>
 <li>Repeat/rephrase/simplify instructions</li>
@@ -484,16 +490,16 @@ The guide is color coded as follows:</P>
 <li>Knowledge of language</li>
 <li>Accuracy and clarity</li>
 </ul></td>
-<td style='text-align: center;'class = "CellWithComment">The student is <span class = forexplanation >frequently</span> confused due to unclear explanation or instructions, and/or instructions are off-task and evidently fail to capture the demands of the lesson plan
+<td class = "CellWithComment text-center">The student is <span class = forexplanation >frequently</span> confused due to unclear explanation or instructions, and/or instructions are off-task and evidently fail to capture the demands of the lesson plan
 <span class="CellCommentFR"><strong>Frequently confused:</strong> More than two instances of evident confusion</span></td>
-<td style='text-align: center;'class = "CellWithComment"><span class = forexplanation >Some</span> instances of student confusion due to unclear explanation or instructions, and conduct of activity does not always accurately correspond to the lesson plan
+<td class = "CellWithComment text-center"><span class = forexplanation >Some</span> instances of student confusion due to unclear explanation or instructions, and conduct of activity does not always accurately correspond to the lesson plan
 <span class="CellCommentFR"><strong>Some confusion:</strong> One to two instances of evident confusion</span></td>
-<td style='text-align: center;' class = "CellWithComment">Instructions and explanations are <span class = forexplanation >frequently</span> clear, accurate, within the boundaries of the lesson plan and <span class = forexplanation >appropriate for the student level</span>
+<td class = "CellWithComment text-center">Instructions and explanations are <span class = forexplanation >frequently</span> clear, accurate, within the boundaries of the lesson plan and <span class = forexplanation >appropriate for the student level</span>
     <span class="CellCommentFR"><strong>Some:</strong> Less than half of the observation</span>
     <span class="CellCommentAP"><strong>Appropriate Student Level:</strong> Delivery of content/instruction/activity is understood by the student with little confusion, or is slightly challenging/accomodating based upon level. <br>
         <br><strong>Inappropriate Student Level:</strong> Use of instruction/content/activities includes words which are beyond the student&rsquo;s level, or is delivered in an unaccomodating manner such as speed.</span>
 </td>
-<td style='text-align: center;'class = "CellWithComment">Instructions and explanations are <span class = forexplanation >consistently</span> given in a clear and accurate manner to support student success and are <span class = forexplanation >appropriately tailored to the student's level</span>
+<td class = "CellWithComment text-center">Instructions and explanations are <span class = forexplanation >consistently</span> given in a clear and accurate manner to support student success and are <span class = forexplanation >appropriately tailored to the student's level</span>
     <br><a href = https://europe.irisconnect.com/reflections/481142 target="_blank" >BENCHMARK A</a>
 
     <span class="CellCommentFR"><strong>Consistently:</strong> Throughout the entire observation</span>
@@ -502,8 +508,8 @@ The guide is color coded as follows:</P>
 </tr>
 <tr>
 <td style='text-align: center;border-top: 1px white'></td>
-<td style='text-align: center;'>Teacher Output</td>
-<td style='text-align: center;'>
+<td class="text-center">Teacher Output</td>
+<td class="text-center">
 <ul type = "disk">
 <li>Speaking speed</li>
 <li>Word choice</li>
@@ -511,16 +517,16 @@ The guide is color coded as follows:</P>
 <li>Grading of language</li>
 <li>Accuracy</li>
 </ul></td>
-<td style='text-align: center;'class = "CellWithComment">There is <span class = forexplanation >little to no</span> <span class = forexplanation >appropriate teacher output</span> and/or teacher output is <span class = forexplanation >not appropriately graded to the student level</span>
+<td class = "CellWithComment text-center">There is <span class = forexplanation >little to no</span> <span class = forexplanation >appropriate teacher output</span> and/or teacher output is <span class = forexplanation >not appropriately graded to the student level</span>
 <span class="CellCommentFR"><strong>Little to no:</strong> Less than 20% of the observation</span>
 <span class="CellCommentAP"><strong>Appropriate Student Level:</strong> Delivery of content/instruction/activity is understood by the student with little confusion, or is slightly challenging/accomodating based upon level. <br>
 <br><strong>Inappropriate Student Level:</strong> Use of instruction/content/activities includes words which are beyond the student&rsquo;s level, or is delivered in an unaccomodating manner such as speed.</span></td>
-<td style='text-align: center;'class = "CellWithComment">There are <span class = forexplanation >some</span> instances of <span class = forexplanation >appropriately graded language</span>
+<td class = "CellWithComment text-center">There are <span class = forexplanation >some</span> instances of <span class = forexplanation >appropriately graded language</span>
 <span class="CellCommentFR"><strong>Some:</strong> Less than half of the observation</span>
 <span class="CellCommentAP"><strong>Appropriate Graded Langaugue:</strong> see 'Needs Improvement'</span></td>
-<td style='text-align: center;'class = "CellWithComment">Teacher output is <span class = forexplanation >frequently</span> accurate and appropriate for the student
+<td class = "CellWithComment text-center">Teacher output is <span class = forexplanation >frequently</span> accurate and appropriate for the student
 <span class="CellCommentFR"><strong>Frequent:</strong> More than half of the observation</span></td>
-<td style='text-align: center;'class = "CellWithComment">Teacher output is <span class = forexplanation >consistently</span> <span class = forexplanation >appropriate for the student</span>
+<td class = "CellWithComment text-center">Teacher output is <span class = forexplanation >consistently</span> <span class = forexplanation >appropriate for the student</span>
 <span class="CellCommentFR"><strong>Consistently:</strong> Throughout the entire observation</span>
 <span class="CellCommentAP"><strong>Appropriate for the student:</strong> see 'Needs Improvement'</span></td>
 </tr>
