@@ -116,6 +116,9 @@
     .text-center{
         text-align: center;
         }
+    .text-left{
+        text-align: left;
+        }
     .font-icon-large{
         font-size: 50px;
         }
