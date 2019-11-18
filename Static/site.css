@@ -28,7 +28,8 @@
 		}
 	.gmisc_table th, .gmisc_table td { padding: 0.5em; }
 
-    .CellWithComment{position:relative;}
+    .CellWithComment{position:relative;
+    cursor: pointer;}
 
     .CellCommentAP{
         visibility: hidden;
@@ -45,8 +46,9 @@
         padding:3px;
         top:20px; 
         left:0px;
-		}   
-    .CellWithComment:hover span.CellCommentAP {visibility: visible;opacity: 1;}
+        } 
+
+    .CellWithComment:active span.CellCommentAP {visibility: visible;opacity: 1;}
 	
 	.CellCommentFR{
         visibility: hidden;
@@ -63,7 +65,7 @@
         padding:3px;        top:-30px; 
         left:0px;
         }   
-    .CellWithComment:hover span.CellCommentFR {visibility: visible;opacity: 1;}
+    .CellWithComment:active span.CellCommentFR {visibility: visible;opacity: 1;}
 		
 	.CellCommentV{
         visibility: hidden;
@@ -82,7 +84,7 @@
         left:0px;
 		right:0px;
         }   
-    .CellWithComment:hover span.CellCommentV {visibility: visible;opacity: 1;}
+    .CellWithComment:active span.CellCommentV {visibility: visible;opacity: 1;}
 		
 	.CellCommentGEN{
         visibility: hidden;
@@ -100,7 +102,7 @@
         top:20px; 
         left:0px;
         }   
-    .CellWithComment:hover span.CellCommentGEN {visibility: visible;opacity: 1;}
+    .CellWithComment:active span.CellCommentGEN {visibility: visible;opacity: 1;}
 		
 	.forexplanation {
 		text-decoration: underline;
