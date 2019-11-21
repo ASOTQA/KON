@@ -15,66 +15,136 @@
         <div class="row">
                 <div class="col-sm-1"></div>
                 <div class="col-sm-10">
+                        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" >
+                                <div class="navbar-brand">
+                                  <img class="menu-closed-logo" alt="EF Education First" src="https://www.ef.com/sitecore/__/~/media/universal/logo/global-header/2018/white/00.svg" height = "50" width = "70">
+                                </div>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                  <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse py-0" id="navbarNavDropdown">
+                                  <ul class="navbar-nav py-0">
+                                    <li class="nav-item dropdown">
+                                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Observation Tools
+                                      </a>
+                                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="https://forms.office.com/Pages/ResponsePage.aspx?id=_cbR8PDfakiOkc_v78fZjWGJjFDHl2JDqKdRAtVgCBZURTlYTFlPQzBSNVBSNlBDTzlXSlpQVlZDSy4u" target="blank_"><span><img alt="Microsoft Forms" src="../Static/microsoft forms.png" height="20" width="20"></span>  Observation Form</a>
+                                        <a class="dropdown-item" href="https://europe.irisconnect.com/sign_in" target="blank_"><span><img alt="IRIS Connect Logo" src="../Static/IRIS connect logo.png" height="20" width="20"></span>  IRIS Sign in</a>
+                                      </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="modal" data-target="#updates" style="cursor: pointer;">
+                                            Updates
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              Resources
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                <a class="dropdown-item" data-toggle="modal" data-target="#flag" style="cursor: pointer;">
+                                                    Immediate Intervention
+                                                </a>
+                                            </div>
+                                          </li>
+                                        
+                                    </li>
+                                  </ul>
+                                </div>
+                              </nav>
                     <div class="jumbotron" style="background-color: #efefef;" >
                         <div class="row">
                             <div class="col-sm-2">
-                                <a class="btn btn-lg btn-dark max" href='https://forms.office.com/Pages/ResponsePage.aspx?id=_cbR8PDfakiOkc_v78fZjWGJjFDHl2JDqKdRAtVgCBZURTlYTFlPQzBSNVBSNlBDTzlXSlpQVlZDSy4u' target="blank_">Observation Form</a>
-                                <button type="button" class="btn btn-lg btn-dark max" data-toggle="modal" data-target="#updates" style="margin-top: 20px;">
-                                        Updates
-                                </button>
-                                <div class="modal fade" id="updates" tabindex="-1" role="dialog" aria-labelledby="updatestitle" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg" role="dialog">
-                                          <div class="modal-content">
-                                            <div class="modal-header">
-                                              <h5 class="modal-title" id="updatestitle">Updates</h5>
-                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                              </button>
-                                            </div>
-                                            <div class="modal-body">
-                                              <p>
-                                                    <u>2019-11-19</u>
-                                                    <ul>
-                                                        <li>Added an 'Updates' section for tracking additions and changes to the rubric</li>
-                                                    </ul>
-                                                    <u>2019-11-18</u>
-                                                    <ul>
-                                                        <li>Scoring guide is now activated by a click, rather than a hover</li>
-                                                        <li>Benchmark clip added for NVC (Exceeds Expectations)</li>
-                                                        <li>Rangefinder clip added for IGE (Developing)</li>
-                                                    </ul>
-                                              </p>
-                                          
-
-                                            </div>
-                                            <div class="modal-footer">
-                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <div class="modal fade" id="updates" tabindex="-1" role="dialog" aria-labelledby="updatestitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="dialog">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <h5 class="modal-title" id="updatestitle">Updates</h5>
+                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <p>
+                                                      <u>2019-11-21</u>
+                                                      <ul>
+                                                          <li>Added a navigation bar for extra resources and observation tools</li>
+                                                      </ul>
+                                                        <u>2019-11-20</u>
+                                                        <ul>
+                                                            <li>Added an 'Immediate Intervention' section to display example cases covered in Observer training</li>
+                                                        </ul>
+                                                        <u>2019-11-19</u>
+                                                        <ul>
+                                                            <li>Added an 'Updates' section for tracking additions and changes to the rubric</li>
+                                                        </ul>
+                                                        <u>2019-11-18</u>
+                                                        <ul>
+                                                            <li>Scoring guide is now activated by a click, rather than a hover</li>
+                                                            <li>Rangefinder clip added for IGE (Developing)</li>
+                                                        </ul>
+                                                  </p></div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                </div>
+                                              </div>
                                             </div>
                                           </div>
-                                        </div>
-                                      </div>
-      
-
-      
-                            
-                            
+                                        <div class="modal fade" id="flag" tabindex="-1" role="dialog" aria-labelledby="flagtitle" aria-hidden="true">
+                                                <div class="modal-dialog modal-lg" role="dialog">
+                                                  <div class="modal-content">
+                                                    <div class="modal-header">
+                                                      <h5 class="modal-title" id="flagtitle">Immediate Intervention Cases</h5>
+                                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                      </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>
+                                                        Immediate intervention might not always be obvious, but please use your best judgement. Generally, anything that is either innappropriate between a teacher and a student OR any external variable that significantly impedes learning should be classified as immediate intervention. Some examples (though not exhaustive) can include:
+                                                        <ul>
+                                                            <li>teacher eating or drinking</li>
+                                                            <li>unprofessional online environment</li>
+                                                            <li>teacher laying down</li>
+                                                            <li>posters in the background with non-child-friendly content</li>
+                                                            <li>constant movement of the camera</li>
+                                                            <li>messy background containing lots of boxes, books, clutter, etc.</li>
+                                                            <li>rude behavior</li>
+                                                            <li>using curse words</li>
+                                                            <li>yawning excessively</li>
+                                                            <li>scolding / raising their voice at the student or parent</li>
+                                                            <li>lewd behavior or images</li>
+                                                            <li>unprofessional clothing (e.g., strapless top, no clothing, inappropriate images or wording displayed)</li>
+                                                        </ul>
+                                                        If you're unsure whether behavior that you have observed should be flagged, feel free to ask for assistance from ASOT or more experienced mentors in the Team's channel.
+                                                    </p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
                             </div>
                             <div class="col-sm-8 text-center">
                                 <h1>Kids Online Observation Rubric</h1>
-                                <h4 class="text-center"'>The rubric below contains the scoring guide for the relevant descriptors/indicators.<br> Those areas which require further explanation are <span class = forexplanation>underlined.</span><br>
-                                    In order to see the embeded scoring guide, simply click on the specific part of the table you wish to see and hold the button down. <br>
+                                <h4 class="text-center"'>The rubric below contains the scoring guide for the relevant descriptors/indicators. <br> Those areas which require further explanation are <span class = forexplanation>underlined.</span><br>
+                                    In order to see the embeded scoring guide, simply click on the specific part of the table you wish to see and hold the button <br>
                                     The guide is color coded as follows:</h4>
-                                    
+   
                             </div>
                             <div class="col-sm-2">
-                                    <img class="menu-closed-logo" alt="EF Education First" src="https://www.ef.com/sitecore/__/~/media/universal/logo/global-header/2018/black/00.svg" height = "50" width = "80">
-
                             </div>
+
+
                         </div>
                         <p style = 'background-color:#fbb819; color: #000000; font-size: 25px; text-align:center;'>Appropriate or Inappropriate Explanations</p> 
                         <p style = 'background-color:#df3d5e; color: #000000; font-size: 25px; text-align:center;'>Words of Frequency</p> 
                         <p style = 'background-color:#8a6e91; color: #000000; font-size: 25px; text-align:center;'>Variety Explanations</p> 
-                        <p  style = 'background-color:#3ca9a1; color: #000000; font-size: 25px; text-align:center;'>General/Other Definitions</p>                          
+                        <p  style = 'background-color:#3ca9a1; color: #000000; font-size: 25px; text-align:center;'>General/Other Definitions</p> 
+                                              
 
                         
                         <div class="overflow-x:auto">
@@ -168,7 +238,6 @@
                         <span class="CellCommentFR "><strong>Frequent:</strong> More than half of the observation</span></td>
                         <td class = "CellWithComment text-center">There is a <span class = forexplanation >context-specific</span> use of non-verbal communication used to enhance success in multiple domains (Learning/Engagement/Communication) 
                             <br> <a href = https://europe.irisconnect.com/reflections/462950 target="_blank" >Mini-Segement: Context Specific Delivery</a>
-                            <br> <a href = https://europe.irisconnect.com/reflections/486888 target="_blank" >BENCHMARK A</a>
                             <span style="top: 0px" class="CellCommentGEN"><strong>Context Specific</strong> Gestures that are directly associated to the target language/language under present discussion</span></td>
                         </tr>
                         <tr>
