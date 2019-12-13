@@ -148,3 +148,8 @@
     .update-element{
         color: crimson;
     }
+    .text-border{
+        border: 2px solid black;
+        display: inline-block;
+        padding: 10px 10px 10px 10px;
+    }
