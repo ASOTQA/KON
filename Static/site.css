@@ -3,7 +3,7 @@
 		font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
 		}
 
-	table{
+table{
 		padding: 0;
 		margin: 0;
         border-collapse: separate;
@@ -14,14 +14,14 @@
         background: #ffff;
         overflow:auto;
 		}
-	td{
+td{
 		border: 1px solid black;
 		padding: 10px;
         text-align: left;
         position: relative;
         }
         
-    th {
+th {
         position: sticky;
         position: -webkit-sticky;
         top: 75px; 
