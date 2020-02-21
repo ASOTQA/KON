@@ -183,6 +183,7 @@ cursor: pointer;}
       border-bottom: 3px solid #ddd;
       display: block;
       margin-bottom: .625em;
+      position: relative;
     }
     
     table td {
@@ -190,6 +191,7 @@ cursor: pointer;}
       display: block;
       font-size: .8em;
       text-align: right;
+      position: relative;
     }
     
     table td::before {
@@ -207,4 +209,7 @@ cursor: pointer;}
       border-bottom: 0;
     }
   }
-  
+
+.benchmark{
+    margin-top: 20px;
+}
