@@ -213,3 +213,48 @@ cursor: pointer;}
 .benchmark{
     margin-top: 20px;
 }
+
+
+.appropriate{
+    background-color: rgb(240, 240, 240);
+    color: #fbb819;
+    border-color: #a0a1a1;
+    transition-duration: 0.4s;
+  }
+  .appropriate:hover {
+    background-color: rgb(211, 209, 209);
+    color: #fbb819;
+  }
+  .frequency{
+    background-color: rgb(240, 240, 240);
+    color: #df3d5e;
+    border-color: #a0a1a1;
+    transition-duration: 0.4s;
+  }
+  .frequency:hover {
+    background-color: rgb(196, 194, 194);
+    color: #df3d5e;
+  
+  }
+  .variety{
+    background-color: rgb(240, 240, 240);
+    color: #8a6e91;
+    border-color: #a0a1a1;
+    transition-duration: 0.4s;
+  }
+  .variety:hover {
+    background-color: rgb(196, 194, 194);
+    color: #8a6e91;
+  
+  }
+  .general{
+    background-color: rgb(240, 240, 240);
+    color: #3ca9a1;
+    border-color: #a0a1a1;
+    transition-duration: 0.4s;
+  }
+  .general:hover {
+    background-color: rgb(196, 194, 194);
+    color: #3ca9a1;
+  
+  }
