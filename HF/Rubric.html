@@ -5,19 +5,52 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" type="image/png" href="../Static/favicon.ico"/>
 		<title>Kids Online Rubric</title>
+		<link rel="stylesheet" href="https://cdn.ef.design/libs/web-ui/latest/css/bundle.min.css" crossorigin="anonymous" />
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.20/b-1.6.1/b-html5-1.6.1/b-print-1.6.1/r-2.2.3/sc-2.0.1/datatables.min.css"/>
 		<link rel="stylesheet" href="../Static/css/site.css">
-		<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js" integrity="sha256-nZaxPHA2uAaquixjSDX19TmIlbRNCOrf5HO1oHl5p70=" crossorigin="anonymous"></script>
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+		<style>
+			label {
+				color: black;
+			}
+			.dataTables_info {
+				color: black;
+			}
+			.margin-pad{
+				margin-bottom: 10px;
+				margin-top: 10px;
+			}
+		</style>
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" >
+		<header class="ef-header -condensed sticky-top" data-activate="ef-header" data-type="condensed">
+			<div class="ef-header__main">
+				<div class="ef-container ef-header__group -standalone">
+					<div class="ef-header__item ef-header__product">
+					  <img class="ef-header__logo -white" src="../Static/EF-Teach-Online-Logo black transparent.png">
+					</div>
+					<button class="ef-header__menu-toggle ef-nav__toggle">
+						<svg class="ef-icon ef-header__icon -animated -animated-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+							<g class="line1"><rect class="rect1" y="9" width="32" height="3" rx="1" ry="1"/></g>
+							<g class="line2"><rect class="rect2" y="20" width="32" height="3" rx="1" ry="1"/></g>
+						</svg>
+					</button>
+					<div class="ef-header__group -nav">
+						<nav class="ef-nav ef-header__item">
+							<ul class="ef-nav__menu">
+								<li class="ef-nav__item"><a class="ef-nav__link" href="KON Rubric 2.0.pdf" target="blank_" style="cursor: pointer;">PDF version</a></li>
+								<li class="ef-nav__item"><a class="ef-nav__link" data-toggle="modal" data-target="#flag" style="cursor: pointer;">Immediate Intervention</a></li>
+								<li class="ef-nav__item"><a class="ef-nav__link" data-toggle="modal" data-target="#updates" style="cursor: pointer;">Updates</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" >
 			<div class="navbar-brand">
 				<img class="menu-closed-logo" alt="EF Education First" src="https://www.ef.com/sitecore/__/~/media/universal/logo/global-header/2018/white/00.svg" height = "50" width = "70">
 			</div>
@@ -53,7 +86,7 @@
 					</li>
 				</ul>
 			</div>
-		</nav>
+		</nav> -->
         <div class="modal fade" id="updates" tabindex="-1" role="dialog" aria-labelledby="updatestitle" aria-hidden="true">
 			<div class="modal-dialog modal-lg" role="dialog">
 			  <div class="modal-content" >
@@ -64,157 +97,162 @@
 				  </button>
 				</div>
 				<div class="modal-body" style="overflow-y: auto;">
-				  <p>Note: Updates to element wording/scoring guides will be in <span class="update-element">red</span><br><hr></p>
-				  <u>2020-03-23</u>
-				  <ul>
-					  <li><span class="update-element">Teaching Strategies:</span> All indicators now have definitions provided</li>
-				  </ul> 
-				  <u>2020-03-13</u>
-				  <ul>
-					  <li><span class="update-element">Praise:</span> Meets Expectations - Added 'variety' condition which provides two defintions, either of which need to be met. The intention here is to allow teacher's who give varied but not specific praise to achieve a Meets Expectations.  </li>
-					  <li>Benchmark Clips Added</li>
-				  </ul>
-				  <u>2020-03-06</u>
-				  <ul>
-					  <li><span class="update-element">Building Rapport:</span> Meets Expectations - Reference to consistent name use removed.</li>
-					  <li><span class="update-element">Non-verbal Communication:</span> Meets Expectations - Added 'variety' condition requiring all indicators be observed.</li>
-					  <li>Benchmark Clips Added</li>
-				  </ul>
-				  <u>2020-03-02</u>
-					  <ul>
-						  <li><span class="update-element">Staging and Timing:</span> Moved requirement to end on goodbye slide to Developing</li>
-					  </ul>
-				  <div class="col-sm-12 box-pad">
-					  <a class="btn btn-dark centre-align max" data-toggle="collapse" href="#february2020" role="button" aria-expand="false" aria-controls="february2020">
-						<i class="fa fa-angle-down" style="font-size: 20px; margin-right: 10px;"></i>February Updates
-					  </a>
-					  <div class = "collapse" id="february2020">
+					<p>Note: Updates to element wording/scoring guides will be in <span class="update-element">red</span><br><hr></p>
+					<u>2020-03-27</u>
+					<ul>
+						<li>Added further explanation on rubric components - in particular, descriptors should now be seen as 'additive criteria', meaning that conditions in lower descriptors are presumed necessary to move upwards, even when otherwise not explicitly stated</li>
+						<li><span class="update-element">Praise:</span> Variety has been further refined as EITHER 1. general and specific praise, or 2. At least three different phrases used</li>
+					</ul>
+					<u>2020-03-23</u>
+					<ul>
+						<li><span class="update-element">Teaching Strategies:</span> All indicators now have definitions provided</li>
+					</ul>
+					<u>2020-03-13</u>
+					<ul>
+						<li><span class="update-element">Praise:</span> Meets Expectations - Added 'variety' condition which provides two defintions, either of which need to be met. The intention here is to allow teacher's who give varied but not specific praise to achieve a Meets Expectations.  </li>
+						<li>Benchmark Clips Added</li>
+					</ul>
+					<u>2020-03-06</u>
+					<ul>
+						<li><span class="update-element">Building Rapport:</span> Meets Expectations - Reference to consistent name use removed.</li>
+						<li><span class="update-element">Non-verbal Communication:</span> Meets Expectations - Added 'variety' condition requiring all indicators be observed.</li>
+						<li>Benchmark Clips Added</li>
+					</ul>
+					<u>2020-03-02</u>
+						<ul>
+							<li><span class="update-element">Staging and Timing:</span> Moved requirement to end on goodbye slide to Developing</li>
+						</ul>
+					<div class="col-sm-12 box-pad">
+						<a class="btn btn-dark centre-align max" data-toggle="collapse" href="#february2020" role="button" aria-expand="false" aria-controls="february2020">
+							<i class="fa fa-angle-down" style="font-size: 20px; margin-right: 10px;"></i>February Updates
+						</a>
+						<div class = "collapse" id="february2020">
+							<div class="card card-body">
+							<u>2020-02-21</u>
+							<ul>
+								<li><span class="update-element">Correction and Feedback:</span> Exceeds Expectations Descriptor - Included 'almost all major errors' </li>
+							</ul>
+							<u>2020-02-06</u>
+							<ul>
+								<li><span class="update-element">Online Environment:</span> 'Centre Position' indicator has been given further detail. </li>
+								<li><span class="update-element">Staging and Timing:</span> All descriptors have been updated based upon new content changes. These decisions were taken based upon conversations with both content and training teams. </li>
+								<li><span class="update-element">Staging and Timing:</span> Added a 'Lesson Component' indicator (with information), and included toggle information for 'Changing Slides' indicator. </li>
+								<li><span>Immediate Intervention:</span> Updated to include content changes </li>
+							</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 box-pad">
+						<a class="btn btn-dark centre-align max" data-toggle="collapse" href="#january2020" role="button" aria-expand="false" aria-controls="january2020">
+						<i class="fa fa-angle-down" style="font-size: 20px; margin-right: 10px;"></i>January Updates
+						</a>
+						<div class = "collapse" id="january2020">
 						<div class="card card-body">
-						  <u>2020-02-21</u>
-						  <ul>
-							  <li><span class="update-element">Correction and Feedback:</span> Exceeds Expectations Descriptor - Included 'almost all major errors' </li>
-						  </ul>
-						  <u>2020-02-06</u>
-						  <ul>
-							  <li><span class="update-element">Online Environment:</span> 'Centre Position' indicator has been given further detail. </li>
-							  <li><span class="update-element">Staging and Timing:</span> All descriptors have been updated based upon new content changes. These decisions were taken based upon conversations with both content and training teams. </li>
-							  <li><span class="update-element">Staging and Timing:</span> Added a 'Lesson Component' indicator (with information), and included toggle information for 'Changing Slides' indicator. </li>
-							  <li><span>Immediate Intervention:</span> Updated to include content changes </li>
-						  </ul>
-						  </div>
-					  </div>
-				  </div>
-				  <div class="col-sm-12 box-pad">
-					<a class="btn btn-dark centre-align max" data-toggle="collapse" href="#january2020" role="button" aria-expand="false" aria-controls="january2020">
-					  <i class="fa fa-angle-down" style="font-size: 20px; margin-right: 10px;"></i>January Updates
-					</a>
-					<div class = "collapse" id="january2020">
-					  <div class="card card-body">
-						<u>2020-01-31</u>
-						<ul>
-						  <li><span class="update-element">Teacher Output:</span> Frequency scoring guides have been changed to reflect the feedback regarding prior overlap. The teacher output category has also been given extra explanation of how to better assign proportion to appropriate output.</li>
-						  <li><Span class="update-element">Instruction Giving and Explanations:</Span> A new emphasisis on guidance given to students has been added to all descriptors, whilst appropriateness has been removed due to the clear overlap with Teacher Output. Instructions/Explanations should be asessed by a teacher's attempt to supplement an instruction/explanation where necessary. For example, to model, repeat, or rephrase if the delivery was initially unclear. Please note: This change grants teachers a degree of freedom in the types of guidance they provide.</li>
-						  <li>New benchmark clips added</li>
-						</ul>
-						<u>2020-01-17</u>
-						<ul>
-						  <li><span class="update-element">Classroom Tools:</span> Developing descriptor - little variety (no more than two tools/tool uses) has been better defined in contrast with variety (more than two tools/tool uses)</li>
-						  <li><span class="update-element">Instruction Giving and Explanations:</span> Needs Improvement descriptor - Threshold has been raised to 'Three or more instances of unclear explanation'. This was previously only requiring two.</li>
-						  <li><span class="update-element">Lesson Delivery:</span> Multiple descriptors - the words 'fun' have been removed from this element. The descision was taken to remove this subjective wording and replace it with engagement/engaging. This is also in order to capture genuine creative efforts that are lesson-specific though not necessarily 'fun'.</li>
-						  <li><span class="update-element">Lesson Delivery:</span> Meets Expectations descriptor - 'engaging techniques' has now been better defined.</li>
-						</ul>
-					  </div>
+							<u>2020-01-31</u>
+							<ul>
+								<li><span class="update-element">Teacher Output:</span> Frequency scoring guides have been changed to reflect the feedback regarding prior overlap. The teacher output category has also been given extra explanation of how to better assign proportion to appropriate output.</li>
+								<li><Span class="update-element">Instruction Giving and Explanations:</Span> A new emphasisis on guidance given to students has been added to all descriptors, whilst appropriateness has been removed due to the clear overlap with Teacher Output. Instructions/Explanations should be asessed by a teacher's attempt to supplement an instruction/explanation where necessary. For example, to model, repeat, or rephrase if the delivery was initially unclear. Please note: This change grants teachers a degree of freedom in the types of guidance they provide.</li>
+								<li>New benchmark clips added</li>
+							</ul>
+							<u>2020-01-17</u>
+							<ul>
+								<li><span class="update-element">Classroom Tools:</span> Developing descriptor - little variety (no more than two tools/tool uses) has been better defined in contrast with variety (more than two tools/tool uses)</li>
+								<li><span class="update-element">Instruction Giving and Explanations:</span> Needs Improvement descriptor - Threshold has been raised to 'Three or more instances of unclear explanation'. This was previously only requiring two.</li>
+								<li><span class="update-element">Lesson Delivery:</span> Multiple descriptors - the words 'fun' have been removed from this element. The descision was taken to remove this subjective wording and replace it with engagement/engaging. This is also in order to capture genuine creative efforts that are lesson-specific though not necessarily 'fun'.</li>
+								<li><span class="update-element">Lesson Delivery:</span> Meets Expectations descriptor - 'engaging techniques' has now been better defined.</li>
+							</ul>
+						</div>
+						</div>
 					</div>
-				  </div>
-				  <!--December 2019 updates --> 
-				  <div class="col-sm-12 box-pad">
-					<a class="btn btn-dark centre-align max" data-toggle="collapse" href="#december2019" role="button" aria-expand="false" aria-controls="december2019">
-					  <i class="fa fa-angle-down" style="font-size: 20px; margin-right: 10px;"></i>December Updates
-					</a>
-					<div class = "collapse" id="december2019">
-					  <div class="card card-body">
-						<u>2019-12-20</u>
-						<ul>
-						  <li><span class="update-element">Positive Learning Environment:</span> Developing descriptor - puts the limit on three indicators being observed, not two</li>
-						  <li><span class="update-element">Teaching Strategies:</span> Needs Improvement descriptor - amount of inappropriate strategies observed changed from 'sometimes' to 'almost always'</li>
-						  <li><span class="update-element">Non-verbal Communication:</span> Exceeds Expectations descriptor - the wording has changed from 'enhance' to 'encourage'</li>
-						  <li><span class="update-element">Classroom Tools:</span> Exceeds Expectations descriptor - the wording has changed from 'enhance' to 'encourage'</li>
-						</ul>
-						<u>2019-12-16</u>
-						<ul>
-						  <li>Added search bar to rubric table. Returns <u>rows</u> containing search criteria</li>
-						  <li>Updated PDF version in line with recent changes. In future, this will also take place on Fridays</li>
-						</ul>
-						<u>2019-12-13</u>
-						<ul>
-						  <li>Added a note that Appropriate/Inappropriate guides are examples, and are therefore not exhaustive in the observed behaviors provided</li>
-						  <li><span class="update-element">Teaching Strategies:</span> Altered wording to Developing Frequency guide to resolve ambiguity between Developing and Meets Expectations </li>
-						  <li><span class="update-element">Non-verbal Communication:</span> Changed the Meets Expectations descriptor to no longer require the enhancement of other domains.</li>
-						  <li><span class="update-element">Classroom Tools:</span> Wording of 'effectiveness' has been removed, and scoring now relies on observed frequency and variety. The term 'tool uses' has also been better defined to mean 'ways of using a tool'.</li>
-						  <li><span class="update-element">Student Production:</span> Appropriate and Inappropriate tags have been updated to include examples specific to student production. Added indicator 'Open/Closed questions'.</li>
-						  <li><span class="update-element">Lesson Delivery:</span> Developing guide of 'some' has been changed to require two attempts. Previously this was 'more than none'.</li>
-						  <li><span class="update-element">Praise:</span> Inappropriate praise is redefined for praising target language mistakes, not simply general mistakes.</li>
-						</ul>
-						<u>2019-12-09</u>
-						<ul>
-						  <li>Fixed hover for Praise Developing Benchmark A: Link is now available</li>
-						  <li>Added a 'Report Issue' tab: Use this for technical issues with the rubric i.e., broken links, poorly formatted scoring guides etc.<li>
-						</ul>
-						<u>2019-12-04</u>
-						<ul>
-						  <li><span class="update-element">Teacher Output:</span> 'Needs Improvement' and 'Developing' descriptors have been altered to be more proportionate to inaccurate/inappropriate language. </li>
-						  <li><span class="update-element">Positive Learning Environment:</span> Each descriptor has been updated to include a variety tag, stating the likely number of indicators per band. This is to be taken in conjunction with the other wording, as well as frequency too. The failure to meet the threshold of indicators may not necessary preclude teachers from attaining that particular descriptor. </li>
-						  <li><span class="update-element">Teaching Strategies:</span> Frequency of appropriateness has been added to each descriptor. <li>
-						  <li>Organising of previous updates: Every month updates will be stored in drop-down buttons below. This is to preserve the focus on the most recent updates</li>
-						</ul>
-						<u>2019-12-02</u>
-						<ul>
-						  <li>Table headers now stay visible when scrolling</li>
-						  <li><span class="update-element">Classroom Tools:</span> Dice and Timer added to indicators and variety added to 'Needs Improvement' descriptor</li>
-						  <li><span class="update-element">Praise Scoring Guide:</span> 'Reward system' is more clearly defined</li>
-						  <li><span class="update-element">Instruction Giving and Explanations Scoring Guide:</span> 'Knowledge of Target Language' is better defined to include phonics, general pronunciation, language structures, and vocabulary.</li>
-						  <li><span class="update-element">Engagement Descriptors:</span> Wording changed to capture effort made as opposed to student reaction. Scoring guide information has been added here too.</li>
-						  <li><span class="update-element">Teaching Strategies:</span> Change to 'Developing' which alters the degree of appropriateness across descriptors to balance against 'Needs Improvement'</li>
-						  <li><span class="update-element">Correction and Feedback:</span> The wording has been narrowed to contain reference to 'all major errors' as opposed to general errors made in a lesson. Also, by clicking on the Correction and Feedback name you will find information about how to score in light of advanced students/no corrections necessary. </li>
-						</ul>
-					  </div>
+					<!--December 2019 updates --> 
+					<div class="col-sm-12 box-pad">
+						<a class="btn btn-dark centre-align max" data-toggle="collapse" href="#december2019" role="button" aria-expand="false" aria-controls="december2019">
+						<i class="fa fa-angle-down" style="font-size: 20px; margin-right: 10px;"></i>December Updates
+						</a>
+						<div class = "collapse" id="december2019">
+						<div class="card card-body">
+							<u>2019-12-20</u>
+							<ul>
+								<li><span class="update-element">Positive Learning Environment:</span> Developing descriptor - puts the limit on three indicators being observed, not two</li>
+								<li><span class="update-element">Teaching Strategies:</span> Needs Improvement descriptor - amount of inappropriate strategies observed changed from 'sometimes' to 'almost always'</li>
+								<li><span class="update-element">Non-verbal Communication:</span> Exceeds Expectations descriptor - the wording has changed from 'enhance' to 'encourage'</li>
+								<li><span class="update-element">Classroom Tools:</span> Exceeds Expectations descriptor - the wording has changed from 'enhance' to 'encourage'</li>
+							</ul>
+							<u>2019-12-16</u>
+							<ul>
+								<li>Added search bar to rubric table. Returns <u>rows</u> containing search criteria</li>
+								<li>Updated PDF version in line with recent changes. In future, this will also take place on Fridays</li>
+							</ul>
+							<u>2019-12-13</u>
+							<ul>
+								<li>Added a note that Appropriate/Inappropriate guides are examples, and are therefore not exhaustive in the observed behaviors provided</li>
+								<li><span class="update-element">Teaching Strategies:</span> Altered wording to Developing Frequency guide to resolve ambiguity between Developing and Meets Expectations </li>
+								<li><span class="update-element">Non-verbal Communication:</span> Changed the Meets Expectations descriptor to no longer require the enhancement of other domains.</li>
+								<li><span class="update-element">Classroom Tools:</span> Wording of 'effectiveness' has been removed, and scoring now relies on observed frequency and variety. The term 'tool uses' has also been better defined to mean 'ways of using a tool'.</li>
+								<li><span class="update-element">Student Production:</span> Appropriate and Inappropriate tags have been updated to include examples specific to student production. Added indicator 'Open/Closed questions'.</li>
+								<li><span class="update-element">Lesson Delivery:</span> Developing guide of 'some' has been changed to require two attempts. Previously this was 'more than none'.</li>
+								<li><span class="update-element">Praise:</span> Inappropriate praise is redefined for praising target language mistakes, not simply general mistakes.</li>
+							</ul>
+							<u>2019-12-09</u>
+								<ul>
+								<li>Fixed hover for Praise Developing Benchmark A: Link is now available</li>
+								<li>Added a 'Report Issue' tab: Use this for technical issues with the rubric i.e., broken links, poorly formatted scoring guides etc.<li>
+							</ul>
+							<u>2019-12-04</u>
+							<ul>
+								<li><span class="update-element">Teacher Output:</span> 'Needs Improvement' and 'Developing' descriptors have been altered to be more proportionate to inaccurate/inappropriate language. </li>
+								<li><span class="update-element">Positive Learning Environment:</span> Each descriptor has been updated to include a variety tag, stating the likely number of indicators per band. This is to be taken in conjunction with the other wording, as well as frequency too. The failure to meet the threshold of indicators may not necessary preclude teachers from attaining that particular descriptor. </li>
+								<li><span class="update-element">Teaching Strategies:</span> Frequency of appropriateness has been added to each descriptor. <li>
+								<li>Organising of previous updates: Every month updates will be stored in drop-down buttons below. This is to preserve the focus on the most recent updates</li>
+							</ul>
+							<u>2019-12-02</u>
+							<ul>
+								<li>Table headers now stay visible when scrolling</li>
+								<li><span class="update-element">Classroom Tools:</span> Dice and Timer added to indicators and variety added to 'Needs Improvement' descriptor</li>
+								<li><span class="update-element">Praise Scoring Guide:</span> 'Reward system' is more clearly defined</li>
+								<li><span class="update-element">Instruction Giving and Explanations Scoring Guide:</span> 'Knowledge of Target Language' is better defined to include phonics, general pronunciation, language structures, and vocabulary.</li>
+								<li><span class="update-element">Engagement Descriptors:</span> Wording changed to capture effort made as opposed to student reaction. Scoring guide information has been added here too.</li>
+								<li><span class="update-element">Teaching Strategies:</span> Change to 'Developing' which alters the degree of appropriateness across descriptors to balance against 'Needs Improvement'</li>
+								<li><span class="update-element">Correction and Feedback:</span> The wording has been narrowed to contain reference to 'all major errors' as opposed to general errors made in a lesson. Also, by clicking on the Correction and Feedback name you will find information about how to score in light of advanced students/no corrections necessary. </li>
+							</ul>
+						</div>
+						</div>
 					</div>
-				  </div>
-				  <!--November 2019 updates --> 
-				  <div class="col-sm-12 box-pad">
-					<a class="btn btn-dark centre-align max" data-toggle="collapse" href="#november2019" role="button" aria-expand="false" aria-controls="november2019">
-					  <i class="fa fa-angle-down" style="font-size: 20px; margin-right: 10px;"></i>November Updates
-					</a>
-					<div class = "collapse" id="november2019">
-					  <div class="card card-body">
-						<u>2019-11-29</u>
-						<ul>
-						  <li><span class="update-element">Teaching Strategies:</span> Frequency has been replaced for variety/quantity of teaching strategies. Appropriate/Inappropriate have been adapted to teaching strategies specifically. Transcending and Extending have been defined better</li>
-						  <li><span class="update-element">Lesson Delivery Scoring Guide:</span> Frequency based upon lesson observation has been removed, and instead replaced with instances of practice (None, more than none).</li>
-						</ul>
-						<u>2019-11-25</u>
-						<ul>
-						  <li>The pdf version of the rubric can now be accessed under the 'Resources' tab</li>
-						</ul>
-						<u>2019-11-21</u>
-						<ul>
-						  <li>Added a navigation bar for extra resources and observation tools</li>
-						  <li><span class="update-element">Updated NVC 'Exceeds Expectations' scoring guide:</span> This descriptor now defines 'context-specific' as gestures explicitly related to target language .</li>
-						</ul>
-						<u>2019-11-20</u>
-						<ul>
-						  <li>Added an 'Immediate Intervention' section to display example cases covered in Observer training</li>
-						</ul>
-						<u>2019-11-19</u>
-						<ul>
-						  <li>Added an 'Updates' section for tracking additions and changes to the rubric</li>
-						</ul>
-						<u>2019-11-18</u>
-						<ul>
-						  <li>Scoring guide is now activated by a click, rather than a hover</li>
-						  <li>Rangefinder clip added for IGE (Developing)</li>
-						</ul>
-					  </div>
+					<!--November 2019 updates --> 
+					<div class="col-sm-12 box-pad">
+						<a class="btn btn-dark centre-align max" data-toggle="collapse" href="#november2019" role="button" aria-expand="false" aria-controls="november2019">
+						<i class="fa fa-angle-down" style="font-size: 20px; margin-right: 10px;"></i>November Updates
+						</a>
+						<div class = "collapse" id="november2019">
+						<div class="card card-body">
+							<u>2019-11-29</u>
+							<ul>
+								<li><span class="update-element">Teaching Strategies:</span> Frequency has been replaced for variety/quantity of teaching strategies. Appropriate/Inappropriate have been adapted to teaching strategies specifically. Transcending and Extending have been defined better</li>
+								<li><span class="update-element">Lesson Delivery Scoring Guide:</span> Frequency based upon lesson observation has been removed, and instead replaced with instances of practice (None, more than none).</li>
+							</ul>
+							<u>2019-11-25</u>
+							<ul>
+								<li>The pdf version of the rubric can now be accessed under the 'Resources' tab</li>
+							</ul>
+							<u>2019-11-21</u>
+							<ul>
+								<li>Added a navigation bar for extra resources and observation tools</li>
+								<li><span class="update-element">Updated NVC 'Exceeds Expectations' scoring guide:</span> This descriptor now defines 'context-specific' as gestures explicitly related to target language .</li>
+							</ul>
+							<u>2019-11-20</u>
+							<ul>
+								<li>Added an 'Immediate Intervention' section to display example cases covered in Observer training</li>
+							</ul>
+							<u>2019-11-19</u>
+							<ul>
+								<li>Added an 'Updates' section for tracking additions and changes to the rubric</li>
+							</ul>
+							<u>2019-11-18</u>
+							<ul>
+								<li>Scoring guide is now activated by a click, rather than a hover</li>
+								<li>Rangefinder clip added for IGE (Developing)</li>
+							</ul>
+						</div>
 					</div>
 				  </div>
 				</div> <!-- modal body -->
@@ -222,8 +260,8 @@
 				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 				</div>
 			  </div>
-					  </div>
-					</div>
+			</div>
+		</div>
 		  <div class="modal fade" id="flag" tabindex="-1" role="dialog" aria-labelledby="flagtitle" aria-hidden="true">
 				  <div class="modal-dialog modal-lg" role="dialog">
 					<div class="modal-content">
@@ -273,41 +311,92 @@
 				  <div class="row">
 					  <div class="col-sm-2">
 					  </div>
-					  <div class="col-sm-8 text-center" style="color: black; margin-top: 60px;">
+					  <div class="col-sm-8 text-center" style="color: black; margin-top: 30px;">
 						  <h1>Kids Online Observation Rubric</h1>
 						  <br>
 						  <h3>Click on the buttons below to learn more about the components of the rubric</h3>
 						  <hr>
 						  <div class="row">
-							  <div class="col-sm-12 text-center" style="margin: 10px;">
-								  <h4>Scoring guides:</h4>
-							  </div>
-							  <div class="col-sm-3">
-								  <button style="width: 100%;" type="button" class="btn btn-lg frequency margin-pad" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top" title="Frequency" data-content="Self-explanatory">Frequency</button>
-							  </div>
-							  <div class="col-sm-3">
-								  <button style="width: 100%;" type="button" class="btn btn-lg variety margin-pad" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top" title="Variety" data-content="Self-explanatory">Variety</button>
-							  </div>
-							  <div class="col-sm-3">
-								  <button style="width: 100%;" type="button" class="btn btn-lg appropriate margin-pad" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top" title="Appropriate" data-content="These are not written to be exhaustive, but give some examples of what appropriate/inappropriate practice might look like.">Appropriate</button>
-								  </div>
-							  <div class="col-sm-3">
-								  <button style="width: 100%;" type="button" class="btn btn-lg general margin-pad" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top" title="General" data-content="These are general comments or explanations surrounding certain concepts/indicators or elements">General</button>
-							  </div>
-							  
-  
-								<div class="col-sm-12 text-center" style="margin: 10px;">
-									<h4>Pre-scored video:</h4>
-								</div>
-								<div class="col-sm-4">
-								  <button style="width: 100%;" type="button" class="btn btn-lg btn-primary margin-pad" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top" title="Benchmark" data-content="A clear-cut example of one teaching component at one performance level">Benchmark <i style="color: black;" class="fa fa-video"></i></button>
-								</div>
-								<div class="col-sm-4">
-								  <button style="width: 100%;" type="button" class="btn btn-lg btn-warning margin-pad" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top" title="Rangefinder" data-content="An example of teaching at the low or high end of a performance level. Rangefinder clips are useful to better distinguish between scoring bands in those instances where evidence is not neatly captured in either one.">Rangefinder <i style="color: black;" class="fa fa-video"></i></button>
-								</div>
-								<div class="col-sm-4">
-								  <button style="width: 100%;" type="button" class="btn btn-lg btn-danger margin-pad" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top" title="Mini-segment" data-content="A clear illustration of one concept important to recognizing relevant evidence">Mini-segment <i style="color: black;" class="fa fa-video"></i></button>
-								</div>
+							<div class="col-sm-4"></div>
+							<div class="col-sm-4 text-center margin-pad">
+								<h4>Scoring guides:</h4>
+							</div>
+							<div class="col-sm-4"></div>
+							<div class="col-sm-3">
+								<button style="width: 100%;" type="button" class="btn btn-lg frequency margin-pad"
+									data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top"
+									title="Frequency" data-content="Self-explanatory">Frequency</button>
+							</div>
+							<div class="col-sm-3">
+								<button style="width: 100%;" type="button" class="btn btn-lg variety margin-pad"
+									data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top"
+									title="Variety" data-content="Self-explanatory">Variety</button>
+							</div>
+							<div class="col-sm-3">
+								<button style="width: 100%;" type="button" class="btn btn-lg appropriate margin-pad"
+									data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top"
+									title="Appropriate"
+									data-content="These are not written to be exhaustive, but give some examples of what appropriate/inappropriate practice might look like.">Appropriate</button>
+							</div>
+							<div class="col-sm-3">
+								<button style="width: 100%;" type="button" class="btn btn-lg general margin-pad"
+									data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top"
+									title="General"
+									data-content="These are general comments or explanations surrounding certain concepts/indicators or elements">General</button>
+							</div>
+			
+			
+							<div class="col-sm-4"></div>
+							<div class="col-sm-4 text-center margin-pad">
+								<h4>Pre-scored Video:</h4>
+							</div>
+							<div class="col-sm-4"></div>
+							<div class="col-sm-4">
+								<button style="width: 100%;" type="button" class="btn btn-lg btn-primary margin-pad"
+									data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top"
+									title="Benchmark"
+									data-content="A clear-cut example of one teaching component at one performance level">Benchmark
+									<i style="color: black;" class="fa fa-video"></i></button>
+							</div>
+							<div class="col-sm-4">
+								<button style="width: 100%;" type="button" class="btn btn-lg btn-warning margin-pad"
+									data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top"
+									title="Rangefinder"
+									data-content="An example of teaching at the low or high end of a performance level. Rangefinder clips are useful to better distinguish between scoring bands in those instances where evidence is not neatly captured in either one.">Rangefinder
+									<i style="color: black;" class="fa fa-video"></i></button>
+							</div>
+							<div class="col-sm-4">
+								<button style="width: 100%;" type="button" class="btn btn-lg btn-danger margin-pad"
+									data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top"
+									title="Mini-segment"
+									data-content="A clear illustration of one concept important to recognizing relevant evidence">Mini-segment
+									<i style="color: black;" class="fa fa-video"></i></button>
+							</div>
+							<div class="col-sm-4"></div>
+							<div class="col-sm-4 text-center margin-pad">
+								<h4>Rubric Components:</h4>
+							</div>
+							<div class="col-sm-4"></div>
+							<div class="col-sm-3">
+								<button type="button" class="btn btn-lg max margin-pad btn-secondary" data-toggle="popover" data-placement="top" data-trigger="focus"  title="Domain" data-content="Domains are the broad categories of knowledge, skills, and performance. There are four standards for teachers: Engagement; Learning; Classroom Management; and Communication.">
+									Domain
+								</button>
+							</div>
+							<div class="col-sm-3">
+								<button type="button" class="btn btn-lg max margin-pad btn-secondary" data-toggle="popover" data-placement="top" data-trigger="focus"  title="Domain" data-content=" Elements describe specific knowledge, skills, and performance for each Domain. This is the level of rubric organization at which scores are assigned.">
+									Element
+								</button>
+							</div>
+							<div class="col-sm-3">
+								<button type="button" class="btn btn-lg max margin-pad btn-secondary" data-toggle="popover" data-placement="top" data-trigger="focus"  title="Domain" data-content="Indicators are more specific descriptions of actions and behaviors related to each Element. The Indicators break down Elements into more specific aspects of teaching/educator practice and provide an opportunity for observers to offer detailed feedback that serves as a roadmap for improvement">
+									Indicator
+								</button>
+							</div>
+							<div class="col-sm-3">
+								<button type="button" class="btn btn-lg max margin-pad btn-secondary" data-toggle="popover" data-placement="top" data-trigger="focus"  title="Domain" data-content="Performance descriptors are observable and measurable statements of teacher actions and behaviors aligned to each Element and serve as the basis for identifying the level of performance. These descriptors are additive - meaning conditions not included in higher descriptors are still required (where relevant)">
+									Descriptor
+								</button>
+							</div>
 							</div>
 							<hr>
   
@@ -319,9 +408,21 @@
 							<table id="table_rubric" class='table-hover' style="margin: 1.75rem auto;">
 								<thead>
 									<tr>
-										<th>Domain</th>
-										<th>Element</th>
-										<th>Indicator</th>
+										<th>
+											<button type="button" class="btn btn-sm btn-secondary" data-toggle="popover" data-placement="top" data-trigger="focus"  title="Domain" data-content="Domains are the broad categories of knowledge, skills, and performance. There are four standards for teachers: Engagement; Learning; Classroom Management; and Communication.">
+												Domain
+											</button>
+										</th>
+										<th>
+											<button type="button" class="btn btn-sm btn-secondary" data-toggle="popover" data-placement="top" data-trigger="focus"  title="Domain" data-content=" Elements describe specific knowledge, skills, and performance for each Domain. This is the level of rubric organization at which scores are assigned.">
+												Element
+											</button>
+										</th>
+										<th>
+											<button type="button" class="btn btn-sm btn-secondary" data-toggle="popover" data-placement="top" data-trigger="focus"  title="Domain" data-content="Indicators are more specific descriptions of actions and behaviors related to each Element. The Indicators break down Elements into more specific aspects of teaching/educator practice and provide an opportunity for observers to offer detailed feedback that serves as a roadmap for improvement">
+												Indicator
+											</button>
+										</th>
 										<th>Needs Improvement</th>
 										<th>Developing</th>
 										<th>Meets Expectations</th>
@@ -482,39 +583,61 @@
 										<td style='text-align: center; border-top: 1px white'></td>
 										<td class="text-center">Praise</td>
 										<td class="text-left">
-											<ul type = "disk">
+											<ul type="disk">
 												<li>General</li>
 												<li>Specific</li>
 												<li>
-													<button type="button" class="btn btn-sm general" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="top" title="Reward System" data-content="The reward system refers to the in-class trophies, or a personalised reward system created by the teacher.">Reward System</button>
+													<button type="button" class="btn btn-sm general" data-trigger="focus"
+														data-container="body" data-toggle="popover" data-placement="top"
+														title="Reward System"
+														data-content="The reward system refers to the in-class trophies, or a personalised reward system created by the teacher.">Reward
+														System</button>
 												</li>
 											</ul>
 										</td>
-										<td class = "text-center">There is 
-											<button type="button" class="btn btn-sm frequency" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="top" title="Little to no" data-content="Less than 20% of the observation">little to no</button> 
+										<td class="text-center">There is
+											<button type="button" class="btn btn-sm frequency" data-trigger="focus"
+												data-container="body" data-toggle="popover" data-placement="top" title="Little to no"
+												data-content="Less than 20% of the observation">little to no</button>
 											attempt to praise/reward the student for achievements in the lesson
-										<td class = "text-center">The teacher gives 
-											<button type="button" class="btn btn-sm frequency" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="top" title="Some" data-content="Less than half of the observation">some</button> 
-											and/or 
-											<button type="button" class="btn btn-sm appropriate" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="top" title="Inappropriate praise/reward" data-content="Praise/Reward is given when student makes mistakes with target language/ given without verbal reinforcement">inappropriate</button>
+										<td class="text-center">The teacher gives
+											<button type="button" class="btn btn-sm frequency" data-trigger="focus"
+												data-container="body" data-toggle="popover" data-placement="top" title="Some"
+												data-content="Less than half of the observation">some</button>
+											and/or
+											<button type="button" class="btn btn-sm appropriate" data-trigger="focus"
+												data-container="body" data-toggle="popover" data-placement="top"
+												title="Inappropriate praise/reward"
+												data-content="Praise/Reward is given when student makes mistakes with target language/ given without verbal reinforcement">inappropriate</button>
 											praise/reward
-											<br> <a style="margin: 10px;" class="btn btn-primary btn-sm" href = https://europe.irisconnect.com/reflections/487808 target="_blank" ><i style="color: black; font-size: 15px;" class="fa fa-video"></i></a>
-											<a style="margin: 10px;" class="btn btn-primary btn-sm" href = https://europe.irisconnect.com/reflections/502599 target="_blank" ><i style="color: black; font-size: 15px;" class="fa fa-video"></i></a>
-  
-										  </td>
+											<br> <a style="margin: 10px;" class="btn btn-primary btn-sm"
+												href=https://europe.irisconnect.com/reflections/487808 target="_blank"><i
+													style="color: black; font-size: 15px;" class="fa fa-video"></i></a>
+											<a style="margin: 10px;" class="btn btn-primary btn-sm"
+												href=https://europe.irisconnect.com/reflections/502599 target="_blank"><i
+													style="color: black; font-size: 15px;" class="fa fa-video"></i></a>
+										</td>
 										<td class = "text-center">Teacher 
 											<button type="button" class="btn btn-sm frequency" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="top" title="Frequent" data-content="More than half of the observation">frequently</button> 
 											praises/rewards the student for achievements in the lesson using a 
-											<button type="button" class="btn btn-sm variety" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="top" title="Variety of Praise" data-content="A variety of praise includes EITHER: 1. general and specific, or 2. varied general praise i.e., multiple phrases and methods used">variety</button> 
+											<button type="button" class="btn btn-sm variety" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="top" title="Variety of Praise" data-content="A variety of praise includes EITHER: 1. general and specific, or 2. varied general praise - at least three different phrases used">variety</button> 
 											of praise
 										</td>
-										<td class = "text-center">The Teacher 
-											<button type="button" class="btn btn-sm frequency" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="top" title="Consistently" data-content="Through the entire observation">consistently</button>
-											and 
-											<button type="button" class="btn btn-sm appropriate" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="top" title="Appropriate praise/reward" data-content="Praise is given when student success is observed">appropriately</button>
-											praises/rewards the student for achievements in the lesson using both general and specific praise
-											<br> <a style="margin: 10px;" class="btn btn-primary btn-sm" href = https://europe.irisconnect.com/reflections/501122 target="_blank" ><i style="color: black; font-size: 15px;" class="fa fa-video"></i></a>
-  
+										<td class="text-center">The Teacher
+											<button type="button" class="btn btn-sm frequency" data-trigger="focus"
+												data-container="body" data-toggle="popover" data-placement="top" title="Consistently"
+												data-content="Through the entire observation">consistently</button>
+											and
+											<button type="button" class="btn btn-sm appropriate" data-trigger="focus"
+												data-container="body" data-toggle="popover" data-placement="top"
+												title="Appropriate praise/reward"
+												data-content="Praise is given when student success is observed">appropriately</button>
+											praises/rewards the student for achievements in the lesson using both general and specific
+											praise
+											<br> <a style="margin: 10px;" class="btn btn-primary btn-sm"
+												href=https://europe.irisconnect.com/reflections/501122 target="_blank"><i
+													style="color: black; font-size: 15px;" class="fa fa-video"></i></a>
+				
 										</td>
 									</tr>
 									<tr>
